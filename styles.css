@@ -1169,14 +1169,6 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr;
   }
 
-  .tech-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .industries-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .footer-grid {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-xl);
@@ -1221,14 +1213,6 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr;
   }
 
-  .tech-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .industries-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .cta-card {
     padding: var(--space-2xl) var(--space-lg);
   }
@@ -1248,14 +1232,6 @@ h1, h2, h3, h4, h5, h6 {
   .hero-stats {
     flex-direction: column;
     gap: var(--space-md);
-  }
-
-  .tech-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .industries-grid {
-    grid-template-columns: 1fr;
   }
 }
 

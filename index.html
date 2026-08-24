@@ -41,14 +41,14 @@
         <a href="#hero">OmniChat</a>
         <a href="#problema">El Problema</a>
         <a href="#solucion">Cómo Funciona</a>
-        <a href="#ejemplo">Ejemplo Real</a>
+        <a href="#casos-industria">Casos por Industria</a>
         <a href="#beneficios">Beneficios</a>
         <a href="#estudio">Chiguirelabs Studio</a>
         <a href="#evaluacion" class="btn btn-primary nav-cta">Evaluar mi operación</a>
       </div>
 
-      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú de navegación">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
       </button>
@@ -102,7 +102,7 @@
         </div>
       </div>
 
-      <!-- Hero Visual Mockup with Official Logo Option 1 -->
+      <!-- Hero Visual Mockup with Official Logo -->
       <div class="hero-visual">
         <div class="omnichat-brand-badge">
           <img src="images/omnichat_logo_pulse.jpg" alt="OmniChat Logo Oficial">
@@ -126,8 +126,8 @@
 
           <div class="wa-body">
             <div class="wa-msg wa-msg-in">
-              <div class="wa-msg-meta">📌 Grupo Técnicos Campo • 09:30 AM</div>
-              <div>Audio de 45 seg recibido: <i>"La bomba de presión de la sucursal norte dejó de funcionar por sobrecalentamiento..."</i></div>
+              <div class="wa-msg-meta">📌 Grupo Técnicos Campo • 08:15 AM</div>
+              <div>Audio de 52 seg recibido: <i>"El Chiller #2 de la Torre Corporativa entró en alarma de alta presión. Presostato disparado y fuga en válvula Danfoss TGEX..."</i></div>
               <div class="wa-audio-player">
                 <div class="wa-play-btn">▶</div>
                 <div class="wa-waveform">
@@ -139,13 +139,13 @@
                   <div class="wa-bar" style="height: 90%"></div>
                   <div class="wa-bar" style="height: 30%"></div>
                 </div>
-                <span style="font-size: 0.7rem; color: var(--clr-text-muted);">0:45</span>
+                <span style="font-size: 0.7rem; color: var(--clr-text-muted);">0:52</span>
               </div>
             </div>
 
             <div class="wa-msg wa-msg-in" style="border-left: 3px solid var(--clr-primary);">
-              <div class="wa-msg-meta">📌 Grupo Coordinaciones • 10:15 AM</div>
-              <div><i>"Se envió a mantenimiento externo con orden #402."</i></div>
+              <div class="wa-msg-meta">📌 Grupo Compras & Refrig. • 09:40 AM</div>
+              <div><i>"Válvula Danfoss ubicada en stock autorizado por $480 USD. Aprobada por Gerencia con OC-882."</i></div>
             </div>
 
             <!-- Auto Generated Daily Report Preview -->
@@ -155,10 +155,10 @@
                 <span class="wa-report-badge">Generado sin intervención</span>
               </div>
               <div style="font-size: 0.85rem; line-height: 1.5; color: var(--clr-text);">
-                <strong>✅ Incidencia Resuelta:</strong> Falla en bomba de presión (Sucursal Norte).<br>
-                <strong>⏱️ Tiempo total de resolución:</strong> 6 hrs 15 mins.<br>
-                <strong>⚡ Trazabilidad:</strong> Campo ➔ Compras ➔ Mantenimiento.<br>
-                <strong>🎯 Acción requerida:</strong> Ninguna.
+                <strong>✅ Incidencia Resuelta:</strong> Falla Crítica Chiller #2 (Torre Corporativa).<br>
+                <strong>⏱️ Tiempo total de resolución:</strong> 6 hrs 00 mins.<br>
+                <strong>⚡ Trazabilidad:</strong> Campo ➔ Compras ➔ Gerencia.<br>
+                <strong>🎯 Acción requerida:</strong> Ninguna (OC-882 procesada).
               </div>
             </div>
           </div>
@@ -262,66 +262,100 @@
     </div>
   </section>
 
-  <!-- ═══════════════ EJEMPLO REAL DE OPERACIÓN ═══════════════ -->
-  <section class="example-section" id="ejemplo">
+  <!-- ═══════════════ CASOS REALES POR INDUSTRIA (INTERACTIVO) ═══════════════ -->
+  <section class="industry-section" id="casos-industria">
     <div class="container">
-      <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-        <span class="section-label">Simulación Operativa</span>
-        <h2 class="section-title">El ciclo de una incidencia <span class="gradient-text">con OmniChat</span></h2>
+      <div style="text-align: center; max-width: 820px; margin: 0 auto;">
+        <span class="section-label">Casos Reales de Operación</span>
+        <h2 class="section-title">Diseñado exactamente para <br><span class="gradient-text">la dinámica de tu industria</span></h2>
+        <p class="section-subtitle">
+          Selecciona tu sector operativo para ver cómo OmniChat resuelve la pérdida de trazabilidad en grupos de WhatsApp reales:
+        </p>
       </div>
 
-      <div class="timeline-grid">
-        <div class="timeline-container">
-          <div class="timeline-item">
-            <div class="timeline-time">09:30 AM</div>
-            <div class="timeline-group">📌 Grupo Técnicos Campo</div>
-            <div class="timeline-content">
-              <strong>Audio de 45 seg:</strong> <em>"La bomba de presión de la sucursal norte dejó de funcionar por sobrecalentamiento."</em>
-            </div>
-          </div>
+      <!-- Industry Tabs Bar with Custom Vector SVGs -->
+      <div class="industry-tabs-bar" id="industry-tabs-bar">
+        <button class="ind-tab-btn active" data-ind="hvac">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m9-9H3m14.071-7.071L6.929 17.071m10.142 0L6.929 6.929" /></svg>
+          1. HVAC / Climatización
+        </button>
 
-          <div class="timeline-item">
-            <div class="timeline-time">10:15 AM</div>
-            <div class="timeline-group">📌 Grupo Coordinadores</div>
-            <div class="timeline-content">
-              <em>"Se envió a mantenimiento externo con orden #402."</em>
-            </div>
-          </div>
+        <button class="ind-tab-btn" data-ind="obra">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.008v.008H6.75V6.75Zm0 4.5h.008v.008H6.75v-.008Zm0 4.5h.008v.008H6.75v-.008Zm4.5-9h.008v.008h-.008V6.75Zm0 4.5h.008v.008h-.008v-.008Zm0 4.5h.008v.008h-.008v-.008Z" /></svg>
+          2. Obra Civil / Construcción
+        </button>
 
-          <div class="timeline-item">
-            <div class="timeline-time">03:45 PM</div>
-            <div class="timeline-group">📌 Grupo Técnicos Campo</div>
-            <div class="timeline-content">
-              <em>"Quedó instalada la refacción y la bomba ya está operando normal."</em>
-            </div>
+        <button class="ind-tab-btn" data-ind="alimentos">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H21m-8.25 0H3.75m0 0a1.5 1.5 0 0 1-1.5-1.5V15m1.5 6v-1.5m0-10.5a1.5 1.5 0 0 1 1.5-1.5h10.5a1.5 1.5 0 0 1 1.5 1.5v1.5H3.75V9Zm15 0V7.5a1.5 1.5 0 0 0-1.5-1.5H3.75" /></svg>
+          3. Alimentos & Sucursales
+        </button>
+
+        <button class="ind-tab-btn" data-ind="refaccionaria">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-4.486c-.048-.58-.072-1.193-.236-1.743M15.17 11.42 12 14.59" /></svg>
+          4. Refaccionarias & Autopartes
+        </button>
+
+        <button class="ind-tab-btn" data-ind="electrico">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" /></svg>
+          5. Eléctrico & Mecánico
+        </button>
+
+        <button class="ind-tab-btn" data-ind="transporte">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.25v11.25m0-11.25h-6.75a2.25 2.25 0 0 0-2.25 2.25v6" /></svg>
+          6. Transporte & Logística
+        </button>
+      </div>
+
+      <!-- Industry Display Card -->
+      <div class="industry-display-card" id="industry-display-card">
+        <div class="industry-header-info">
+          <div>
+            <span class="ind-tag-badge" id="ind-tag">Climatización & Chillers</span>
+            <h3 style="font-family: var(--ff-heading); font-size: 1.45rem; font-weight: 700; margin-top: 0.35rem;" id="ind-title">Mantenimiento HVAC Comercial / Industrial</h3>
+          </div>
+          <div style="font-size: 0.85rem; color: var(--clr-wa-green); font-weight: 600; display: flex; align-items: center; gap: 0.5rem; background: rgba(37, 211, 102, 0.12); padding: 0.4rem 0.85rem; border-radius: var(--radius-pill);">
+            <span class="pulse-dot"></span>
+            Simulación de Grupos Activos
           </div>
         </div>
 
-        <!-- Direct Executive Output -->
-        <div class="report-card">
-          <div class="report-header-badge">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
-            Lo que recibe la Dirección a las 6:00 PM
+        <div class="timeline-grid" style="margin-top: 1rem;">
+          <!-- Dynamic WhatsApp Chat Flow -->
+          <div class="timeline-container" id="ind-chat-container">
+            <!-- Rendered dynamically by JS -->
           </div>
 
-          <div class="report-item">
-            <div class="report-label">Incidencia Resuelta</div>
-            <div class="report-value" style="color: var(--clr-wa-green);">Falla en bomba de presión (Sucursal Norte)</div>
-          </div>
+          <!-- Dynamic Executive Output Card -->
+          <div class="report-card" id="ind-report-card">
+            <div class="report-header-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+              Lo que recibe la Dirección a las 6:00 PM
+            </div>
 
-          <div class="report-item">
-            <div class="report-label">Estado Actual</div>
-            <div class="report-value">Reparada y operativa</div>
-          </div>
+            <div class="report-item">
+              <div class="report-label">Incidencia Resuelta</div>
+              <div class="report-value" id="rep-title" style="color: var(--clr-wa-green);">Falla Crítica Chiller #2 (Torre Corporativa)</div>
+            </div>
 
-          <div class="report-item">
-            <div class="report-label">Tiempo total de resolución (SLA)</div>
-            <div class="report-value" style="color: var(--clr-primary);">6 horas 15 minutos</div>
-          </div>
+            <div class="report-item">
+              <div class="report-label">Estado Actual</div>
+              <div class="report-value" id="rep-status">Reparada y Operativa al 100%</div>
+            </div>
 
-          <div class="report-item">
-            <div class="report-label">Acción requerida por Dirección</div>
-            <div class="report-value" style="color: var(--clr-text-muted);">Ninguna (Caso cerrado automáticamente)</div>
+            <div class="report-item">
+              <div class="report-label">Tiempo total de resolución (SLA)</div>
+              <div class="report-value" id="rep-sla" style="color: var(--clr-primary);">6 horas 00 minutos</div>
+            </div>
+
+            <div class="report-item">
+              <div class="report-label">Impacto Evitado / Operacional</div>
+              <div class="report-value" id="rep-impact" style="color: var(--clr-text);">Presión y temperatura de edificio normalizadas sin suspensión de actividades</div>
+            </div>
+
+            <div class="report-item">
+              <div class="report-label">Acción requerida por Dirección</div>
+              <div class="report-value" id="rep-action" style="color: var(--clr-text-muted);">Ninguna (OC-882 procesada)</div>
+            </div>
           </div>
         </div>
       </div>
@@ -453,7 +487,6 @@
           <button type="button" class="btn btn-ghost" onclick="resetEvalForm()">Enviar otra consulta</button>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -546,7 +579,227 @@
       });
     });
 
-    // Online Web3Forms Submission Handler
+    // ─── 6 Ultra-Realistic Industry Data Object ───
+    const industryCases = {
+      hvac: {
+        title: "Mantenimiento HVAC Comercial / Industrial",
+        tag: "Climatización & Chillers",
+        timeline: [
+          {
+            time: "08:15 AM",
+            group: "📌 Grupo Técnicos HVAC Campo",
+            text: "Audio de 52 seg: <em>'El Chiller #2 de la Torre Corporativa entró en alarma de alta presión. Presostato disparado y fuga en válvula Danfoss TGEX.'</em>"
+          },
+          {
+            time: "09:40 AM",
+            group: "📌 Grupo Compras & Refrig.",
+            text: "<em>'Válvula Danfoss ubicada en stock autorizado por $480 USD. Aprobada por Gerencia con Orden de Compra #OC-882.'</em>"
+          },
+          {
+            time: "02:15 PM",
+            group: "📌 Grupo Técnicos HVAC Campo",
+            text: "<em>'Válvula sustituida, vacío realizado a 500 micrones y recarga R-410A concluida. Chiller #2 operando estable a 22°C.'</em>"
+          }
+        ],
+        report: {
+          title: "Falla Crítica Chiller #2 (Torre Corporativa)",
+          status: "Reparada y Operativa al 100%",
+          sla: "6 horas 00 minutos (SLA < 8h)",
+          impact: "Presión y temperatura de edificio normalizadas sin suspensión de actividades",
+          action: "Ninguna (OC-882 procesada)"
+        }
+      },
+      obra: {
+        title: "Constructora & Obra Civil General",
+        tag: "Edificación & Estructuras",
+        timeline: [
+          {
+            time: "07:30 AM",
+            group: "📌 Grupo Residencia Obra Frente 3",
+            text: "Audio de 38 seg: <em>'Nos faltan 2 toneladas de varilla de 1/2\" para cerrar la parrilla del eje C-12. El colado con bomba pluma es a la 1:00 PM.'</em>"
+          },
+          {
+            time: "08:45 AM",
+            group: "📌 Grupo Abastecimiento & Acero",
+            text: "<em>'Despachado camión con 2 TN de varilla 1/2\" desde almacén central con guía de remisión #1092. ETA a obra: 10:15 AM.'</em>"
+          },
+          {
+            time: "01:30 PM",
+            group: "📌 Grupo Residencia Obra Frente 3",
+            text: "<em>'Varilla recibida y armada. Inicio de colado de 45m³ con concreto premezclado. Prueba de tiro y revenimiento aprobada (14cm).'</em>"
+          }
+        ],
+        report: {
+          title: "Riesgo de Paro en Colado de Losa (Eje C-12)",
+          status: "Colado completado sin retraso",
+          sla: "5 horas 00 minutos",
+          impact: "Cero horas de retraso en cronograma ($0 penalización por standby de bomba)",
+          action: "Ninguna (Consumo de varilla actualizado en ERP)"
+        }
+      },
+      alimentos: {
+        title: "Alimentos & Bebidas (Sucursales / Franquicias)",
+        tag: "Restaurantes & Cadena de Frío",
+        timeline: [
+          {
+            time: "11:10 AM",
+            group: "📌 Grupo Sucursal Zona Centro",
+            text: "Audio de 40 seg: <em>'La cámara de congelación principal está en 8°C (debe estar en -18°C). Si sube más se pierde el lote de corte prime.'</em>"
+          },
+          {
+            time: "11:30 AM",
+            group: "📌 Grupo Mantenimiento Franquicias",
+            text: "<em>'Técnico en ruta con relevador de repuesto y R-404A. ETA 20 min. Se traslada producto a congelador auxiliar de respaldo.'</em>"
+          },
+          {
+            time: "03:20 PM",
+            group: "📌 Grupo Sucursal Zona Centro",
+            text: "<em>'Relevador cambiado y condensador limpio. Temperatura restablecida a -19°C. Cero merma de producto.'</em>"
+          }
+        ],
+        report: {
+          title: "Alerta de Temperatura Frigorífica (Sucursal Centro)",
+          status: "Cadena de frío restablecida",
+          sla: "4 horas 10 minutos (SLA Contingencia < 5h)",
+          impact: "$4,500 USD salvados en merma de insumo prime de res",
+          action: "Programar mantenimiento preventivo semestral"
+        }
+      },
+      refaccionaria: {
+        title: "Refaccionarias (Autopartes) con Sucursales",
+        tag: "Venta Flotillera & Traspasos",
+        timeline: [
+          {
+            time: "10:05 AM",
+            group: "📌 Grupo Ventas Sucursal Norte",
+            text: "<em>'Cliente flotilla solicita 4 kits de embrague LUK para camionetas de reparto. Solo tenemos 1 kit en almacén local. Venta de $2,800 a punto de caerse.'</em>"
+          },
+          {
+            time: "10:30 AM",
+            group: "📌 Grupo Logística & Traspasos",
+            text: "<em>'Ubicados 3 kits en Sucursal Sur. Motoboy despachado con folio de traspaso inter-sucursal #T-504.'</em>"
+          },
+          {
+            time: "01:15 PM",
+            group: "📌 Grupo Ventas Sucursal Norte",
+            text: "<em>'Traspaso recibido, pedido facturado e instalado en taller de cliente. Cobrado en terminal bancaria.'</em>"
+          }
+        ],
+        report: {
+          title: "Traspaso Inter-Sucursal por Venta Flotilla",
+          status: "Venta concretada y cobrada",
+          sla: "2 horas 40 minutos",
+          impact: "$2,800 USD en ingresos salvados por agilidad logística",
+          action: "Reajustar stock mínimo de seguridad en Sucursal Norte"
+        }
+      },
+      electrico: {
+        title: "Servicios Eléctricos & Mecánicos Industriales",
+        tag: "Fuerza, Tableros & Subestaciones",
+        timeline: [
+          {
+            time: "06:45 AM",
+            group: "📌 Grupo Emergencias Industriales",
+            text: "Audio de 60 seg: <em>'Planta Metalmecánica sin energía en Línea 2. Disparó el interruptor electromagnético de 1600A por sobrecorriente en fase B.'</em>"
+          },
+          {
+            time: "08:15 AM",
+            group: "📌 Grupo Pruebas & Calibración",
+            text: "<em>'Equipo de termografía en sitio. Detectado falso contacto y aislamiento degradado en barra colectora principal.'</em>"
+          },
+          {
+            time: "02:00 PM",
+            group: "📌 Grupo Gerencia de Servicio",
+            text: "<em>'Mantenimiento a barras realizado, torque a 55 lb-ft y pruebas de aislamiento aprobadas (>500 MΩ). Energización limpia.'</em>"
+          }
+        ],
+        report: {
+          title: "Disparo de Interruptor de Fuerza (Planta Metalmecánica)",
+          status: "Línea 2 energizada y operando",
+          sla: "7 horas 15 minutos",
+          impact: "Pruebas de aislamiento certificadas según norma NEMA/NETA (>500 MΩ)",
+          action: "Programar inspección termográfica preventiva en tableros secundarios"
+        }
+      },
+      transporte: {
+        title: "Servicios de Transporte & Logística de Carga",
+        tag: "Flotas en Ruta & Auxilio Carretero",
+        timeline: [
+          {
+            time: "11:40 AM",
+            group: "📌 Grupo Monitoreo de Unidades",
+            text: "Audio de 35 seg: <em>'Unidad #104 (Tractocamión Freightliner) varada en km 142 Autopista Norte por daño en neumático y manguera de freno.'</em>"
+          },
+          {
+            time: "12:15 PM",
+            group: "📌 Grupo Auxilio Vial & Talleres",
+            text: "<em>'Unidad de rescate móvil #04 enviada en sitio con 2 neumáticos 295/80R22.5 y kit de conexiones neumáticas.'</em>"
+          },
+          {
+            time: "03:10 PM",
+            group: "📌 Grupo Operaciones Logísticas",
+            text: "<em>'Reparación concluida. Unidad reanudó marcha con termoking en 4°C. Llegada a CEDIS dentro de ventana autorizada.'</em>"
+          }
+        ],
+        report: {
+          title: "Auxilio Carretero Exprés (Unidad #104 Frigorífico)",
+          status: "Carga entregada en CEDIS a tiempo",
+          sla: "3 horas 30 minutos",
+          impact: "Pérdida de carga perecedera: 0% (Cadena de frío garantizada a 4°C)",
+          action: "Ninguna (Registro de garantía de neumáticos procesado)"
+        }
+      }
+    };
+
+    // ─── Industry Switcher Logic ───
+    const indTabs = document.querySelectorAll('.ind-tab-btn');
+    const indTag = document.getElementById('ind-tag');
+    const indTitle = document.getElementById('ind-title');
+    const indChatContainer = document.getElementById('ind-chat-container');
+    
+    const repTitle = document.getElementById('rep-title');
+    const repStatus = document.getElementById('rep-status');
+    const repSla = document.getElementById('rep-sla');
+    const repImpact = document.getElementById('rep-impact');
+    const repAction = document.getElementById('rep-action');
+
+    function renderIndustryCase(indKey) {
+      const data = industryCases[indKey];
+      if (!data) return;
+
+      indTag.textContent = data.tag;
+      indTitle.textContent = data.title;
+
+      // Render WhatsApp Timeline Items
+      indChatContainer.innerHTML = data.timeline.map(item => `
+        <div class="timeline-item">
+          <div class="timeline-time">${item.time}</div>
+          <div class="timeline-group">${item.group}</div>
+          <div class="timeline-content">${item.text}</div>
+        </div>
+      `).join('');
+
+      // Render Executive Report Card
+      repTitle.textContent = data.report.title;
+      repStatus.textContent = data.report.status;
+      repSla.textContent = data.report.sla;
+      repImpact.textContent = data.report.impact;
+      repAction.textContent = data.report.action;
+    }
+
+    indTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        indTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const indKey = tab.getAttribute('data-ind');
+        renderIndustryCase(indKey);
+      });
+    });
+
+    // Initial render
+    renderIndustryCase('hvac');
+
+    // ─── Online Web3Forms Submission Handler ───
     const form = document.getElementById('omnichat-form');
     const successBox = document.getElementById('form-success-box');
     const submitBtn = document.getElementById('form-submit-btn');
@@ -609,8 +862,6 @@
       form.reset();
     }
   </script>
-
-
 
 </body>
 </html>

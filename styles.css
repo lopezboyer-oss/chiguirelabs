@@ -156,7 +156,7 @@ button, input, select, textarea {
   justify-content: center;
   gap: 0.75rem;
   padding: 0.9rem 1.8rem;
-  min-height: 48px; /* Touch target standard */
+  min-height: 48px;
   border-radius: var(--radius-pill);
   font-family: var(--ff-heading);
   font-weight: 600;
@@ -560,11 +560,109 @@ button, input, select, textarea {
   white-space: nowrap;
 }
 
+/* ─── Industry Interactive Showcase Section ─── */
+.industry-section {
+  padding: 6.5rem 0;
+  background: var(--clr-bg-surface);
+  border-top: 1px solid var(--clr-border);
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.industry-tabs-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding: 0.5rem 0.25rem 1.25rem;
+  margin-top: 3rem;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.industry-tabs-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.ind-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.8rem 1.35rem;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-pill);
+  color: var(--clr-text-muted);
+  font-family: var(--ff-heading);
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+
+.ind-tab-btn svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.25s ease;
+}
+
+.ind-tab-btn:hover {
+  background: rgba(37, 211, 102, 0.1);
+  border-color: rgba(37, 211, 102, 0.3);
+  color: var(--clr-text);
+}
+
+.ind-tab-btn.active {
+  background: rgba(37, 211, 102, 0.18);
+  border-color: var(--clr-wa-green);
+  color: var(--clr-wa-green);
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.2);
+}
+
+.ind-tab-btn.active svg {
+  transform: scale(1.15);
+}
+
+.industry-display-card {
+  background: var(--clr-bg-card);
+  border: 1px solid var(--clr-border-active);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-lg);
+  margin-top: 1.5rem;
+  transition: opacity 0.3s ease;
+}
+
+.industry-header-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ind-tag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.85rem;
+  background: rgba(0, 229, 195, 0.15);
+  border: 1px solid rgba(0, 229, 195, 0.3);
+  border-radius: var(--radius-pill);
+  color: var(--clr-primary);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
 /* ─── Problems Section ─── */
 .problems-section {
   padding: 6rem 0;
   background: rgba(11, 16, 29, 0.5);
-  border-top: 1px solid var(--clr-border);
   border-bottom: 1px solid var(--clr-border);
 }
 
@@ -692,9 +790,6 @@ button, input, select, textarea {
 /* ─── Real Example / Timeline Section ─── */
 .example-section {
   padding: 6rem 0;
-  background: var(--clr-bg-surface);
-  border-top: 1px solid var(--clr-border);
-  border-bottom: 1px solid var(--clr-border);
 }
 
 .timeline-grid {
@@ -1039,10 +1134,9 @@ button, input, select, textarea {
 }
 
 /* ══════════════════════════════════════════════════════════════
-   RESPONSIVE BREAKPOINTS (Tablets, Mobiles, Foldables)
+   RESPONSIVE BREAKPOINTS
    ══════════════════════════════════════════════════════════════ */
 
-/* ─── Large Tablets / Small Laptops (max-width: 992px) ─── */
 @media (max-width: 992px) {
   .hero-grid, .timeline-grid {
     grid-template-columns: 1fr;
@@ -1057,7 +1151,6 @@ button, input, select, textarea {
     display: flex;
   }
 
-  /* Mobile Slide-down Menu Drawer */
   .nav-links {
     position: fixed;
     top: 70px;
@@ -1096,10 +1189,14 @@ button, input, select, textarea {
   }
 }
 
-/* ─── Tablets & Mobile Phones (max-width: 768px) ─── */
 @media (max-width: 768px) {
   .hero {
     padding: 7.5rem 0 4rem;
+  }
+
+  .industry-display-card {
+    padding: 1.5rem 1.25rem;
+    border-radius: var(--radius-lg);
   }
 
   .form-container-box {
@@ -1120,10 +1217,6 @@ button, input, select, textarea {
     font-size: 0.75rem;
   }
 
-  .omnichat-brand-badge {
-    padding: 0.6rem 1rem;
-  }
-
   .btn-primary, .btn-ghost {
     width: 100%;
   }
@@ -1141,7 +1234,6 @@ button, input, select, textarea {
   }
 }
 
-/* ─── Small Mobile Phones (max-width: 480px) ─── */
 @media (max-width: 480px) {
   .container {
     padding: 0 1rem;
@@ -1155,28 +1247,7 @@ button, input, select, textarea {
     font-size: 1.6rem;
   }
 
-  .wa-header {
-    padding: 0.75rem;
-  }
-
-  .wa-body {
-    padding: 1rem 0.75rem;
-  }
-
-  .wa-msg {
-    font-size: 0.82rem;
-  }
-
-  .wa-audio-player {
-    gap: 0.5rem;
-    padding: 0.4rem 0.5rem;
-  }
-
   .report-card {
     padding: 1.5rem 1rem;
-  }
-
-  .nav-brand span {
-    font-size: 1.1rem;
   }
 }

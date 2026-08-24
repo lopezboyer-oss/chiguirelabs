@@ -511,11 +511,21 @@
       nav.classList.toggle('scrolled', window.scrollY > 40);
     }, { passive: true });
 
-    // Mobile Menu Toggle
+    // Mobile Menu Toggle & Auto-Close
     const navToggle = document.getElementById('nav-toggle');
     const navLinks = document.getElementById('nav-links');
+    
     navToggle.addEventListener('click', () => {
       navLinks.classList.toggle('open');
+      const isOpen = navLinks.classList.contains('open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
     });
 
     // Form Submission Handler
@@ -534,6 +544,7 @@
       window.open(`mailto:lopezboyer@gmail.com?subject=Diagnóstico OmniChat - ${company}&body=${body}`, '_self');
     });
   </script>
+
 
 </body>
 </html>

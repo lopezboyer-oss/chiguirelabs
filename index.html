@@ -304,7 +304,13 @@
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.25v11.25m0-11.25h-6.75a2.25 2.25 0 0 0-2.25 2.25v6" /></svg>
           6. Transporte & Logística
         </button>
+
+        <button class="ind-tab-btn" data-ind="cedis">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h6.75M9 11.25h6.75M9 15.75h6.75" /></svg>
+          7. CEDIS & Almacén
+        </button>
       </div>
+
 
       <!-- Industry Display Card -->
       <div class="industry-display-card" id="industry-display-card">
@@ -748,8 +754,37 @@
           impact: "Pérdida de carga perecedera: 0% (Cadena de frío garantizada a 4°C)",
           action: "Ninguna (Registro de garantía de neumáticos procesado)"
         }
+      },
+      cedis: {
+        title: "Centro de Distribución (CEDIS) & Almacén Central",
+        tag: "Andenes, Rampa & Inventarios",
+        timeline: [
+          {
+            time: "06:15 AM",
+            group: "📌 Grupo Andenes & Recibo CEDIS",
+            text: "Audio de 48 seg: <em>'El tráiler de la orden #OC-9940 llegó a rampa 4 con 24 tarimas, pero 3 vienen dañadas y el chofer no trae folio de cita impresa.'</em>"
+          },
+          {
+            time: "07:05 AM",
+            group: "📌 Grupo Control Inventarios & ERP",
+            text: "<em>'Verificada factura con proveedor. Se autoriza la recepción parcial de 21 tarimas en sistema y la nota de devolución por las 3 dañadas (Folio #DEV-302).'</em>"
+          },
+          {
+            time: "09:30 AM",
+            group: "📌 Grupo Andenes & Recibo CEDIS",
+            text: "<em>'Tráiler liberado y rampa 4 despejada. Tarimas ingresadas a rack de cuarentena y stock disponible para surtido.'</em>"
+          }
+        ],
+        report: {
+          title: "Discrepancia & Desbloqueo Rampa 4 (CEDIS Central)",
+          status: "Recibo parcial procesado / Andén liberado",
+          sla: "3 horas 15 minutos (SLA Recibo < 4h)",
+          impact: "Cero penalización por demoras de transporte ($1,200 USD salvados en tiempos de espera de flota)",
+          action: "Nota de devolución #DEV-302 enviada a Cuentas por Pagar"
+        }
       }
     };
+
 
     // ─── Industry Switcher Logic ───
     const indTabs = document.querySelectorAll('.ind-tab-btn');

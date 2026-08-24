@@ -385,6 +385,11 @@
 
       <div class="form-container-box">
         <form class="eval-form" id="omnichat-form">
+          <input type="hidden" name="access_key" value="7f0a7605-dabf-45db-bd2b-888918e735d1">
+          <input type="hidden" name="subject" value="Nuevo Diagnóstico Operativo OmniChat - Chiguirelabs">
+          <input type="hidden" name="from_name" value="OmniChat Web Landing">
+          <input type="checkbox" name="botcheck" style="display: none;">
+
           <div>
             <label class="form-label" for="fullname">Nombre completo *</label>
             <input type="text" id="fullname" name="fullname" class="form-input" placeholder="Ej. Carlos Mendoza" required>
@@ -429,13 +434,26 @@
           </div>
 
           <div class="form-group-full" style="text-align: center; margin-top: 1rem;">
-            <button type="submit" class="btn btn-primary" style="width: 100%; max-width: 480px; font-size: 1.1rem; padding: 1.1rem;">
-              Solicitar diagnóstico y propuesta a la medida
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
+            <button type="submit" class="btn btn-primary" id="form-submit-btn" style="width: 100%; max-width: 480px; font-size: 1.1rem; padding: 1.1rem;">
+              <span class="btn-text">Solicitar diagnóstico y propuesta a la medida</span>
+              <span class="btn-loading" style="display: none;">Enviando diagnóstico...</span>
+              <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
             </button>
           </div>
         </form>
+
+        <div id="form-success-box" style="display: none; text-align: center; padding: 2rem 1rem;">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(37, 211, 102, 0.2); color: var(--clr-wa-green); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="32" height="32"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+          </div>
+          <h3 style="font-size: 1.6rem; margin-bottom: 0.75rem; font-family: var(--ff-heading);">¡Solicitud recibida con éxito!</h3>
+          <p style="color: var(--clr-text-muted); font-size: 1.05rem; max-width: 540px; margin: 0 auto 1.5rem; line-height: 1.6;">
+            Gracias por contactar a <strong>OmniChat / Chiguirelabs</strong>. Hemos recibido la información de tu operación y un especialista analizará la estructura de tus grupos para enviarte una propuesta a la medida.
+          </p>
+          <button type="button" class="btn btn-ghost" onclick="resetEvalForm()">Enviar otra consulta</button>
+        </div>
       </div>
+
     </div>
   </section>
 
@@ -528,22 +546,70 @@
       });
     });
 
-    // Form Submission Handler
+    // Online Web3Forms Submission Handler
     const form = document.getElementById('omnichat-form');
-    form.addEventListener('submit', (e) => {
+    const successBox = document.getElementById('form-success-box');
+    const submitBtn = document.getElementById('form-submit-btn');
+
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const formData = new FormData(form);
-      const name = formData.get('fullname');
-      const email = formData.get('email');
-      const phone = formData.get('phone');
-      const company = formData.get('company');
-      const groups = formData.get('groups_count');
+
+      const btnText = submitBtn.querySelector('.btn-text');
+      const btnLoading = submitBtn.querySelector('.btn-loading');
+      const btnIcon = submitBtn.querySelector('.btn-icon');
+
+      submitBtn.disabled = true;
+      btnText.style.display = 'none';
+      if (btnIcon) btnIcon.style.display = 'none';
+      btnLoading.style.display = 'inline-block';
+
+      try {
+        const formData = new FormData(form);
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        });
+        const data = await res.json();
+
+        if (data.success) {
+          form.style.display = 'none';
+          successBox.style.display = 'block';
+          form.reset();
+        } else {
+          // Fallback: Mailto
+          triggerMailtoFallback(formData);
+        }
+      } catch (err) {
+        // Fallback: Mailto
+        const formData = new FormData(form);
+        triggerMailtoFallback(formData);
+      } finally {
+        submitBtn.disabled = false;
+        btnText.style.display = '';
+        if (btnIcon) btnIcon.style.display = '';
+        btnLoading.style.display = 'none';
+      }
+    });
+
+    function triggerMailtoFallback(formData) {
+      const name = formData.get('fullname') || '';
+      const email = formData.get('email') || '';
+      const phone = formData.get('phone') || '';
+      const company = formData.get('company') || '';
+      const groups = formData.get('groups_count') || '';
       const challenge = formData.get('challenge') || 'N/A';
 
       const body = `Diagnóstico Operativo OmniChat:%0A%0ANombre: ${name}%0AEmail: ${email}%0ATeléfono: ${phone}%0AEmpresa: ${company}%0AGrupos activos: ${groups}%0AReto principal:%0A${challenge}`;
       window.open(`mailto:lopezboyer@gmail.com?subject=Diagnóstico OmniChat - ${company}&body=${body}`, '_self');
-    });
+    }
+
+    function resetEvalForm() {
+      form.style.display = '';
+      successBox.style.display = 'none';
+      form.reset();
+    }
   </script>
+
 
 
 </body>

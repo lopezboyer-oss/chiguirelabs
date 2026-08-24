@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chiguirelabs — Soluciones Digitales con Inteligencia Artificial</title>
-  <meta name="description" content="Transformamos operaciones industriales y comerciales en plataformas digitales inteligentes. Dashboards ejecutivos, integraciones ERP, apps web a medida con IA.">
-  <meta property="og:title" content="Chiguirelabs — Soluciones Digitales con IA">
-  <meta property="og:description" content="Estudio de ingeniería de software especializado en soluciones digitales a medida para empresas industriales.">
+  <title>OmniChat — Inteligencia Operativa en WhatsApp | Chiguirelabs</title>
+  <meta name="description" content="OmniChat conecta todos tus grupos de WhatsApp, procesa mensajes y audios con IA, y entrega reportes ejecutivos directos a la dirección con incidentes resueltos y SLAs.">
+  
+  <meta property="og:title" content="OmniChat — Inteligencia Operativa en WhatsApp">
+  <meta property="og:description" content="Control total de la operación de tu empresa sin leer cientos de mensajes de WhatsApp.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://chiguirelabs.com/whatsapp-preview.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/jpg" href="images/omnichat_logo_pulse.jpg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
@@ -26,17 +26,27 @@
   <!-- ═══════════════ NAVIGATION ═══════════════ -->
   <nav class="nav" id="main-nav">
     <div class="container nav-inner">
-      <a href="#" class="nav-brand">
-        <img src="logo.png" alt="Chiguirelabs logo">
-        <span>Chiguire<span style="color: var(--clr-primary)">labs</span></span>
-      </a>
-      <div class="nav-links" id="nav-links">
-        <a href="#servicios">Servicios</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#tecnologias">Tecnologías</a>
-        <a href="#industrias">Industrias</a>
-        <a href="#contacto" class="nav-cta">Conversemos</a>
+      <div class="brand-wrapper">
+        <a href="#" class="nav-brand">
+          <img src="images/logo.png" alt="Chiguirelabs Logo" class="chiguire-logo-img">
+          <span>Chiguire<span style="color: var(--clr-primary)">labs</span></span>
+        </a>
+        <div class="product-pill">
+          <img src="images/omnichat_logo_pulse.jpg" alt="OmniChat Logo" class="omnichat-mini-logo">
+          <span>OmniChat</span>
+        </div>
       </div>
+      
+      <div class="nav-links" id="nav-links">
+        <a href="#hero">OmniChat</a>
+        <a href="#problema">El Problema</a>
+        <a href="#solucion">Cómo Funciona</a>
+        <a href="#ejemplo">Ejemplo Real</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#estudio">Chiguirelabs Studio</a>
+        <a href="#evaluacion" class="btn btn-primary nav-cta">Evaluar mi operación</a>
+      </div>
+
       <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú de navegación">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -45,457 +55,424 @@
     </div>
   </nav>
 
-  <!-- ═══════════════ HERO ═══════════════ -->
+  <!-- ═══════════════ HERO SECTION: OMNICHAT ═══════════════ -->
   <section class="hero" id="hero">
     <div class="container hero-grid">
       <div class="hero-content">
         <div class="hero-tag">
-          <span class="pulse"></span>
-          Ingeniería de Software + IA
+          <span class="pulse-dot"></span>
+          Inteligencia Operativa en WhatsApp
         </div>
+
         <h1>
-          Digitalizamos lo que <span class="gradient-text">realmente importa</span>
+          Tu empresa ya se gestiona por WhatsApp. <br>
+          <span class="gradient-text">Ahora puedes tener el control total</span> sin leer cientos de mensajes.
         </h1>
-        <p class="hero-description">
-          Construimos soluciones digitales a <strong>velocidad sobrehumana</strong> gracias a la Inteligencia Artificial. Desde dashboards ejecutivos listos <em>overnight</em> (de un día para otro), hasta integraciones complejas para tu operación. Resultados rápidos, sin meses de espera.
+
+        <p class="hero-subtitle">
+          <strong>OmniChat</strong> es el sistema de inteligencia artificial que conecta todos tus grupos de trabajo, procesa mensajes y audios, y te entrega al final del día un resumen ejecutivo con los problemas resueltos, bloqueos pendientes y tiempos de atención.
         </p>
+
+        <div class="hero-value-props">
+          <div class="value-item">
+            <div class="value-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+            </div>
+            <span><strong>Cero aplicaciones nuevas</strong> para tu personal.</span>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+            </div>
+            <span><strong>Conexión inteligente</strong> entre grupos operativos y administrativos.</span>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+            </div>
+            <span><strong>Reportes diarios</strong> directos a la dirección.</span>
+          </div>
+        </div>
+
         <div class="hero-actions">
-          <a href="#contacto" class="btn btn-primary">
-            Iniciar Proyecto
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
+          <a href="#evaluacion" class="btn btn-primary">
+            Evaluar mi operación con OmniChat
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
           </a>
-          <a href="#portfolio" class="btn btn-ghost">
-            Ver Portfolio
-          </a>
-        </div>
-        <div class="hero-stats">
-          <div>
-            <div class="hero-stat-value">7+</div>
-            <div class="hero-stat-label">Proyectos Entregados</div>
-          </div>
-          <div>
-            <div class="hero-stat-value">5</div>
-            <div class="hero-stat-label">Industrias</div>
-          </div>
-          <div>
-            <div class="hero-stat-value">⚡</div>
-            <div class="hero-stat-label">Entregas en Tiempo Récord</div>
-          </div>
         </div>
       </div>
+
+      <!-- Hero Visual Mockup with Official Logo Option 1 -->
       <div class="hero-visual">
-        <div class="hero-visual-inner">
-          <div class="orbit-ring"><div class="orbit-dot"></div></div>
-          <div class="orbit-ring"><div class="orbit-dot"></div></div>
-          <div class="hero-logo-container">
-            <img src="logo.png" alt="Chiguirelabs — Capybara tech logo" width="320" height="320">
+        <div class="omnichat-brand-badge">
+          <img src="images/omnichat_logo_pulse.jpg" alt="OmniChat Logo Oficial">
+          <div>
+            <div class="omnichat-brand-name">Omni<span style="color: var(--clr-wa-green);">Chat</span></div>
+            <div style="font-size: 0.78rem; color: var(--clr-text-muted);">Inteligencia Operativa en WhatsApp</div>
+          </div>
+        </div>
+
+        <div class="wa-mockup-card">
+          <div class="wa-header">
+            <div class="wa-header-left">
+              <img src="images/omnichat_logo_pulse.jpg" alt="OmniChat AI Avatar" class="wa-avatar-img">
+              <div>
+                <div class="wa-title">OmniChat AI Engine</div>
+                <div class="wa-status">Auditor Operativo Activo (Grupos Conectados)</div>
+              </div>
+            </div>
+            <div style="font-size: 0.75rem; color: var(--clr-wa-green); background: rgba(37, 211, 102, 0.15); padding: 0.2rem 0.6rem; border-radius: 4px;">EN VIVO</div>
+          </div>
+
+          <div class="wa-body">
+            <div class="wa-msg wa-msg-in">
+              <div class="wa-msg-meta">📌 Grupo Técnicos Campo • 09:30 AM</div>
+              <div>Audio de 45 seg recibido: <i>"La bomba de presión de la sucursal norte dejó de funcionar por sobrecalentamiento..."</i></div>
+              <div class="wa-audio-player">
+                <div class="wa-play-btn">▶</div>
+                <div class="wa-waveform">
+                  <div class="wa-bar" style="height: 40%"></div>
+                  <div class="wa-bar" style="height: 80%"></div>
+                  <div class="wa-bar" style="height: 60%"></div>
+                  <div class="wa-bar" style="height: 100%"></div>
+                  <div class="wa-bar" style="height: 50%"></div>
+                  <div class="wa-bar" style="height: 90%"></div>
+                  <div class="wa-bar" style="height: 30%"></div>
+                </div>
+                <span style="font-size: 0.7rem; color: var(--clr-text-muted);">0:45</span>
+              </div>
+            </div>
+
+            <div class="wa-msg wa-msg-in" style="border-left: 3px solid var(--clr-primary);">
+              <div class="wa-msg-meta">📌 Grupo Coordinaciones • 10:15 AM</div>
+              <div><i>"Se envió a mantenimiento externo con orden #402."</i></div>
+            </div>
+
+            <!-- Auto Generated Daily Report Preview -->
+            <div class="wa-report-box">
+              <div class="wa-report-header">
+                <span class="wa-report-title">📊 Resumen Ejecutivo OmniChat — 06:00 PM</span>
+                <span class="wa-report-badge">Generado sin intervención</span>
+              </div>
+              <div style="font-size: 0.85rem; line-height: 1.5; color: var(--clr-text);">
+                <strong>✅ Incidencia Resuelta:</strong> Falla en bomba de presión (Sucursal Norte).<br>
+                <strong>⏱️ Tiempo total de resolución:</strong> 6 hrs 15 mins.<br>
+                <strong>⚡ Trazabilidad:</strong> Campo ➔ Compras ➔ Mantenimiento.<br>
+                <strong>🎯 Acción requerida:</strong> Ninguna.
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════ MARQUEE ═══════════════ -->
-  <section class="marquee-section" aria-label="Industrias y tecnologías">
-    <p class="marquee-label">Construido con tecnologías modernas para industrias reales</p>
-    <div style="overflow: hidden;">
-      <div class="marquee-track">
-        <span class="marquee-item"><span class="dot"></span>Dashboards Overnight</span>
-        <span class="marquee-item"><span class="dot"></span>Desarrollo con IA</span>
-        <span class="marquee-item"><span class="dot"></span>Automatización de Procesos</span>
-        <span class="marquee-item"><span class="dot"></span>Integraciones Rápidas</span>
-        <span class="marquee-item"><span class="dot"></span>Reportes en Tiempo Real</span>
-        <span class="marquee-item"><span class="dot"></span>Soluciones a Medida</span>
-        <span class="marquee-item"><span class="dot"></span>Despliegue Acelerado</span>
-        <span class="marquee-item"><span class="dot"></span>Inteligencia Comercial</span>
-        <span class="marquee-item"><span class="dot"></span>Extrema Rapidez</span>
-        <span class="marquee-item"><span class="dot"></span>Sin Meses de Espera</span>
-        <!-- Duplicate for infinite scroll -->
-        <span class="marquee-item"><span class="dot"></span>Dashboards Overnight</span>
-        <span class="marquee-item"><span class="dot"></span>Desarrollo con IA</span>
-        <span class="marquee-item"><span class="dot"></span>Automatización de Procesos</span>
-        <span class="marquee-item"><span class="dot"></span>Integraciones Rápidas</span>
-        <span class="marquee-item"><span class="dot"></span>Reportes en Tiempo Real</span>
-        <span class="marquee-item"><span class="dot"></span>Soluciones a Medida</span>
-        <span class="marquee-item"><span class="dot"></span>Despliegue Acelerado</span>
-        <span class="marquee-item"><span class="dot"></span>Inteligencia Comercial</span>
-        <span class="marquee-item"><span class="dot"></span>Extrema Rapidez</span>
-        <span class="marquee-item"><span class="dot"></span>Sin Meses de Espera</span>
+  <!-- ═══════════════ EL PROBLEMA OPERATIVO ═══════════════ -->
+  <section class="problems-section" id="problema">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <span class="section-label">El Problema Operativo</span>
+        <h2 class="section-title">El verdadero cuello de botella de tu empresa <br><span class="gradient-text">está escondido en tus chats</span></h2>
+      </div>
+
+      <div class="problems-grid">
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" /></svg>
+          </div>
+          <h3>Pérdida de trazabilidad</h3>
+          <p>Un técnico reporta una urgencia a las 9:00 AM, el supervisor la delega en otro grupo y nadie confirma si se solucionó hasta que el cliente se queja al día siguiente.</p>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" d="M19.142 10.581a8.383 8.383 0 0 1 .9 3.82c0 2.008-.705 3.857-1.884 5.316m-2.408 2.01a8.386 8.386 0 0 1-4.25 1.148c-4.634 0-8.39-3.756-8.39-8.39 0-2.008.705-3.857 1.884-5.316m2.408-2.01a8.386 8.386 0 0 1 4.25-1.148c1.942 0 3.73.66 5.152 1.768" /></svg>
+          </div>
+          <h3>Sobrecarga de audios y ruido</h3>
+          <p>Mensajes informales, audios de 2 minutos y conversaciones cruzadas ocultan la información verdaderamente crítica de la operación cotidiana.</p>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 0 0 2.25-2.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v2.25A2.25 2.25 0 0 0 6 10.5Z" /></svg>
+          </div>
+          <h3>Silos entre departamentos</h3>
+          <p>Los problemas nacen en el grupo de campo, se gestionan en el de compras y se coordinan en el de supervisión. Ninguna herramienta tradicional conecta esos tres puntos sin intervención humana.</p>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" /></svg>
+          </div>
+          <h3>Resistencia al cambio</h3>
+          <p>Implementar softwares pesados de gestión (Jira, Asana, Monday) fracasa porque el personal de campo simplemente prefiere seguir usando WhatsApp.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════ SERVICES ═══════════════ -->
-  <section class="services-section" id="servicios">
+  <!-- ═══════════════ LA SOLUCIÓN: CÓMO FUNCIONA ═══════════════ -->
+  <section class="solution-section" id="solucion">
     <div class="container">
-      <div class="services-header reveal">
-        <span class="section-label">Servicios</span>
-        <h2 class="section-title">Soluciones que transforman <span class="gradient-text">tu operación</span></h2>
+      <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <span class="section-label">La Solución: Cómo Funciona OmniChat</span>
+        <h2 class="section-title">Un auditor operativo invisible <br><span class="gradient-text">dentro de tus grupos de trabajo</span></h2>
         <p class="section-subtitle">
-          Desde plataformas de gestión completas hasta dashboards ejecutivos y herramientas de IA, cada proyecto se diseña para resolver un problema real de negocio.
+          OmniChat no te pide que cambies la forma en que trabaja tu equipo. El sistema se integra silenciosamente a los grupos de WhatsApp que ya existen y realiza el trabajo analítico de fondo:
         </p>
       </div>
 
-      <div class="services-grid">
-        <!-- Service 1 -->
-        <div class="service-card glass-card reveal">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
-            </svg>
+      <div class="solution-steps">
+        <div class="step-card">
+          <span class="step-number">01</span>
+          <div class="step-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" /></svg>
           </div>
-          <h3>Plataformas de Gestión Operativa</h3>
-          <p>Desarrollamos aplicaciones web completas a una fracción del tiempo tradicional gracias a la generación de código asistida por Inteligencia Artificial.</p>
-          <div class="service-tags">
-            <span class="service-tag">Despliegue Rápido</span>
-            <span class="service-tag">Asistido por IA</span>
-            <span class="service-tag">Escalable</span>
+          <h3>1. Escucha y centraliza</h3>
+          <p>Recibe cada mensaje de texto y transcribe notas de voz en tiempo real de todos los grupos autorizados de tu empresa.</p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number">02</span>
+          <div class="step-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" /></svg>
+          </div>
+          <h3>2. Cruza la información (Correlación Inter-Grupo)</h3>
+          <p>Si un problema se reportó en el <em>Grupo de Técnicos</em> y el repuesto se coordinó en el <em>Grupo de Compras</em>, OmniChat detecta que se trata del mismo evento y ata los cabos sueltos automáticamente.</p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number">03</span>
+          <div class="step-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 0 1-.659 1.591l-5.432 5.432a2.25 2.25 0 0 0-.659 1.591v2.927a2.25 2.25 0 0 1-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 0 0-.659-1.591L3.659 7.409A2.25 2.25 0 0 1 3 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0 1 12 3Z" /></svg>
+          </div>
+          <h3>3. Filtra el ruido</h3>
+          <p>Descarta saludos, charlas casuales y contenido irrelevante; solo extrae compromisos, incidentes, gastos y bloqueos críticos.</p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number">04</span>
+          <div class="step-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75M3 4.5h18M3 9.75h18M3 15h18M3 20.25h18" /></svg>
+          </div>
+          <h3>4. Entrega el cierre diario</h3>
+          <p>Al finalizar la jornada, genera un reporte ejecutivo estructurado para la gerencia con los incidentes atendidos, el estado de cada caso y los temas que requieren atención inmediata.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ EJEMPLO REAL DE OPERACIÓN ═══════════════ -->
+  <section class="example-section" id="ejemplo">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <span class="section-label">Simulación Operativa</span>
+        <h2 class="section-title">El ciclo de una incidencia <span class="gradient-text">con OmniChat</span></h2>
+      </div>
+
+      <div class="timeline-grid">
+        <div class="timeline-container">
+          <div class="timeline-item">
+            <div class="timeline-time">09:30 AM</div>
+            <div class="timeline-group">📌 Grupo Técnicos Campo</div>
+            <div class="timeline-content">
+              <strong>Audio de 45 seg:</strong> <em>"La bomba de presión de la sucursal norte dejó de funcionar por sobrecalentamiento."</em>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-time">10:15 AM</div>
+            <div class="timeline-group">📌 Grupo Coordinadores</div>
+            <div class="timeline-content">
+              <em>"Se envió a mantenimiento externo con orden #402."</em>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-time">03:45 PM</div>
+            <div class="timeline-group">📌 Grupo Técnicos Campo</div>
+            <div class="timeline-content">
+              <em>"Quedó instalada la refacción y la bomba ya está operando normal."</em>
+            </div>
           </div>
         </div>
 
-        <!-- Service 2 -->
-        <div class="service-card glass-card reveal">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
-            </svg>
+        <!-- Direct Executive Output -->
+        <div class="report-card">
+          <div class="report-header-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+            Lo que recibe la Dirección a las 6:00 PM
+          </div>
+
+          <div class="report-item">
+            <div class="report-label">Incidencia Resuelta</div>
+            <div class="report-value" style="color: var(--clr-wa-green);">Falla en bomba de presión (Sucursal Norte)</div>
+          </div>
+
+          <div class="report-item">
+            <div class="report-label">Estado Actual</div>
+            <div class="report-value">Reparada y operativa</div>
+          </div>
+
+          <div class="report-item">
+            <div class="report-label">Tiempo total de resolución (SLA)</div>
+            <div class="report-value" style="color: var(--clr-primary);">6 horas 15 minutos</div>
+          </div>
+
+          <div class="report-item">
+            <div class="report-label">Acción requerida por Dirección</div>
+            <div class="report-value" style="color: var(--clr-text-muted);">Ninguna (Caso cerrado automáticamente)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ BENEFICIOS DIRECTOS ═══════════════ -->
+  <section class="benefits-section" id="beneficios">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <span class="section-label">Retorno de Inversión</span>
+        <h2 class="section-title">Beneficios directos <span class="gradient-text">para el negocio</span></h2>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+          </div>
+          <h3>Cero fricción de adopción</h3>
+          <p>Tu personal sigue enviando mensajes y audios exactamente igual que hoy. No hay capacitaciones complejas ni curvas de aprendizaje.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+          </div>
+          <h3>Fin de los cabos sueltos</h3>
+          <p>Identifica de inmediato si una tarea o incidente crítico quedó sin respuesta durante la jornada.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+          </div>
+          <h3>Tiempos de respuesta medibles (SLA)</h3>
+          <p>Conoce con datos reales cuánto tarda cada área en resolver los problemas que le corresponden.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292" /></svg>
+          </div>
+          <h3>Ahorro de horas directivas</h3>
+          <p>Elimina las reuniones de sincronización innecesarias y las llamadas constantes para preguntar <em>"¿en qué quedó aquello?"</em>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FORMULARIO DE EVALUACIÓN OPERATIVA ═══════════════ -->
+  <section class="form-section" id="evaluacion">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <span class="section-label">Evaluación Operativa</span>
+        <h2 class="section-title">Descubre cómo estructurar <span class="gradient-text">la operación de tu empresa</span></h2>
+        <p class="section-subtitle">
+          Cada empresa tiene una dinámica de comunicación distinta. Analizamos el flujo actual de tus grupos de trabajo y diseñamos una solución a la medida de tu volumen operativo.
+        </p>
+      </div>
+
+      <div class="form-container-box">
+        <form class="eval-form" id="omnichat-form">
+          <div>
+            <label class="form-label" for="fullname">Nombre completo *</label>
+            <input type="text" id="fullname" name="fullname" class="form-input" placeholder="Ej. Carlos Mendoza" required>
+          </div>
+
+          <div>
+            <label class="form-label" for="email">Correo corporativo *</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="carlos@tuempresa.com" required>
+          </div>
+
+          <div>
+            <label class="form-label" for="phone">Número de WhatsApp / Teléfono *</label>
+            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+58 412 123 4567" required>
+          </div>
+
+          <div>
+            <label class="form-label" for="company">Nombre de la empresa *</label>
+            <input type="text" id="company" name="company" class="form-input" placeholder="Ej. Logística e Industrias del Norte" required>
+          </div>
+
+          <div class="form-group-full">
+            <label class="form-label">¿Cuántos grupos de WhatsApp utilizan activamente para coordinar la operación? *</label>
+            <div class="radio-group-options">
+              <label class="radio-card">
+                <input type="radio" name="groups_count" value="1 a 5" checked>
+                <div class="radio-card-content">1 a 5 grupos</div>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="groups_count" value="6 a 15">
+                <div class="radio-card-content">6 a 15 grupos</div>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="groups_count" value="Más de 15">
+                <div class="radio-card-content">Más de 15 grupos</div>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group-full">
+            <label class="form-label" for="challenge">Breve descripción del principal reto de comunicación o seguimiento que enfrentan hoy</label>
+            <textarea id="challenge" name="challenge" rows="4" class="form-textarea" placeholder="Ej. Los repuestos tardan en autorizarse entre el grupo de compras y mantenimiento, perdiendo la traza de los incidentes..."></textarea>
+          </div>
+
+          <div class="form-group-full" style="text-align: center; margin-top: 1rem;">
+            <button type="submit" class="btn btn-primary" style="width: 100%; max-width: 480px; font-size: 1.1rem; padding: 1.1rem;">
+              Solicitar diagnóstico y propuesta a la medida
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CHIGUIRELABS STUDIO SECTION ═══════════════ -->
+  <section class="studio-section" id="estudio">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <span class="section-label section-label-alt">Chiguirelabs Software Studio</span>
+        <h2 class="section-title">El estudio de ingeniería de software con IA <br><span class="gradient-text-accent">detrás de OmniChat</span></h2>
+        <p class="section-subtitle">
+          Transformamos operaciones industriales y comerciales en plataformas digitales inteligentes. Desarrollamos soluciones a medida a velocidad sobrehumana.
+        </p>
+      </div>
+
+      <div class="studio-grid">
+        <div class="studio-card">
+          <div class="studio-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" /></svg>
           </div>
           <h3>Dashboards Overnight</h3>
-          <p>Conectamos tus datos y te entregamos un tablero interactivo completo literalmente <strong>de la noche a la mañana</strong>. Toma decisiones ejecutivas mañana mismo.</p>
-          <div class="service-tags">
-            <span class="service-tag">Velocidad Extrema</span>
-            <span class="service-tag">KPIs Dinámicos</span>
-            <span class="service-tag">Tiempo Real</span>
-          </div>
+          <p>Paneles ejecutivos y dashboards de control operativo construidos y desplegados en tiempo récord gracias a nuestra pila de desarrollo acelerada con IA.</p>
         </div>
 
-        <!-- Service 3 -->
-        <div class="service-card glass-card reveal">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
-            </svg>
+        <div class="studio-card">
+          <div class="studio-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918" /></svg>
           </div>
-          <h3>Integraciones Express con ERP</h3>
-          <p>Extraemos el valor oculto de tu ERP (como Odoo) sin alterar su núcleo. Implementamos reportes y cruces de datos mediante IA en un par de días.</p>
-          <div class="service-tags">
-            <span class="service-tag">Sin Fricción</span>
-            <span class="service-tag">Automatizado</span>
-            <span class="service-tag">Resultados Inmediatos</span>
-          </div>
+          <h3>Integraciones ERP / CRM & APIs</h3>
+          <p>Conectamos tus herramientas existentes (SAP, Salesforce, QuickBooks, bases de datos SQL) con agentes de inteligencia artificial y automatizaciones.</p>
         </div>
 
-        <!-- Service 4 -->
-        <div class="service-card glass-card reveal">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
-            </svg>
+        <div class="studio-card">
+          <div class="studio-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 0 1 4.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 1-6.23.693L4.2 15.3m15.6 0L21 21H3l1.2-5.7" /></svg>
           </div>
-          <h3>Digitalización Acelerada</h3>
-          <p>Transformamos esas interminables hojas de cálculo en plataformas interactivas para tu equipo, estructurando tus procesos de forma limpia y segura.</p>
-          <div class="service-tags">
-            <span class="service-tag">Seguridad</span>
-            <span class="service-tag">Accesibilidad</span>
-            <span class="service-tag">Exportación Ágil</span>
-          </div>
-        </div>
-
-        <!-- Service 5 -->
-        <div class="service-card glass-card reveal">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-            </svg>
-          </div>
-          <h3>Plataformas para ONGs</h3>
-          <p>Aplicaciones de donaciones, transparencia y reportes para organizaciones sin fines de lucro, con backend en Supabase y seguridad integrada.</p>
-          <div class="service-tags">
-            <span class="service-tag">React</span>
-            <span class="service-tag">Supabase</span>
-            <span class="service-tag">RLS</span>
-          </div>
-        </div>
-
-        <!-- Service 6 -->
-        <div class="service-card glass-card reveal">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
-            </svg>
-          </div>
-          <h3>Consultoría en IA Aplicada</h3>
-          <p>Análisis de datos, clasificación automática de texto, optimización SQL y workflows automatizados con inteligencia artificial.</p>
-          <div class="service-tags">
-            <span class="service-tag">ML</span>
-            <span class="service-tag">NLP</span>
-            <span class="service-tag">Agentes IA</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════ PORTFOLIO ═══════════════ -->
-  <section class="portfolio-section" id="portfolio">
-    <div class="container">
-      <div class="portfolio-header reveal">
-        <span class="section-label">Portfolio</span>
-        <h2 class="section-title">Soluciones entregadas en <span class="gradient-text">tiempo récord</span></h2>
-        <p class="section-subtitle">
-          Cada proyecto nació de una emergencia u oportunidad operativa. Gracias a la IA, diseñamos y desplegamos soluciones complejas en fracciones del tiempo tradicional.
-        </p>
-      </div>
-
-      <div class="portfolio-grid">
-        <!-- Featured: Perry App -->
-        <div class="portfolio-card glass-card featured reveal">
-          <div class="portfolio-card-visual">
-            <div class="featured-mockup">
-              <div class="mockup-titlebar">
-                <div class="mockup-dot"></div>
-                <div class="mockup-dot"></div>
-                <div class="mockup-dot"></div>
-              </div>
-              <div class="mockup-body">
-                <div class="mockup-row"><div class="mockup-block w-60 accent"></div><div class="mockup-block w-40"></div></div>
-                <div class="mockup-row"><div class="mockup-block w-100"></div></div>
-                <div class="mockup-row"><div class="mockup-block w-80 purple"></div></div>
-                <div class="mockup-row"><div class="mockup-block w-40"></div><div class="mockup-block w-60 accent"></div></div>
-                <div class="mockup-chart">
-                  <div class="chart-bar" style="height: 45%"></div>
-                  <div class="chart-bar" style="height: 70%"></div>
-                  <div class="chart-bar" style="height: 55%"></div>
-                  <div class="chart-bar" style="height: 90%"></div>
-                  <div class="chart-bar" style="height: 65%"></div>
-                  <div class="chart-bar" style="height: 80%"></div>
-                  <div class="chart-bar" style="height: 40%"></div>
-                  <div class="chart-bar" style="height: 75%"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-card-content">
-            <span class="portfolio-card-badge badge-web">Desarrollo Ultra Rápido</span>
-            <h3>Perry App</h3>
-            <p>Sistema integral de gestión de actividades para equipos de ingeniería. Creado a una velocidad vertiginosa para centralizar dashboards, KPIs, pipelines de ventas y control de roles bajo estrictas normas de seguridad (Row-Level Security).</p>
-            <div class="portfolio-card-stack">
-              <span class="stack-pill">Next.js 14</span>
-              <span class="stack-pill">TypeScript</span>
-              <span class="stack-pill">Prisma</span>
-              <span class="stack-pill">Supabase</span>
-              <span class="stack-pill">NextAuth</span>
-              <span class="stack-pill">Recharts</span>
-              <span class="stack-pill">Tailwind</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Oráculo Odoo -->
-        <div class="portfolio-card glass-card reveal">
-          <div class="portfolio-card-content">
-            <span class="portfolio-card-badge badge-tool">Herramienta CLI + Dashboards</span>
-            <h3>Oráculo Odoo</h3>
-            <p>Suite de inteligencia comercial conectada a Odoo vía JSON-RPC. Consultas libres a la base de datos, auditorías automáticas de vendedores con gráficos de facturación y simuladores de rentabilidad.</p>
-            <div class="portfolio-card-stack">
-              <span class="stack-pill">TypeScript</span>
-              <span class="stack-pill">Node.js</span>
-              <span class="stack-pill">Odoo API</span>
-              <span class="stack-pill">Chart.js</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Visor Administrativo -->
-        <div class="portfolio-card glass-card reveal">
-          <div class="portfolio-card-content">
-            <span class="portfolio-card-badge badge-dashboard">Dashboard Ejecutivo</span>
-            <h3>Visor de Carga Administrativa</h3>
-            <p>Tablero de productividad del equipo administrativo con datos extraídos de Odoo en tiempo real. Filtros por empresa, fecha y responsable. Desplegado en Netlify 24/7.</p>
-            <div class="portfolio-card-stack">
-              <span class="stack-pill">TypeScript</span>
-              <span class="stack-pill">Odoo API</span>
-              <span class="stack-pill">Netlify</span>
-              <span class="stack-pill">HTML/JS</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Dashboard Andenes -->
-        <div class="portfolio-card glass-card reveal">
-          <div class="portfolio-card-content">
-            <span class="portfolio-card-badge badge-dashboard">Dashboard de KPIs</span>
-            <h3>Visor de Andenes Industriales</h3>
-            <p>KPIs de póliza de mantenimiento de andenes industriales: hallazgos, intervenciones, mantenimientos preventivos y datos financieros. Extracción automatizada desde PDFs y Excel.</p>
-            <div class="portfolio-card-stack">
-              <span class="stack-pill">Python</span>
-              <span class="stack-pill">Chart.js</span>
-              <span class="stack-pill">pdfplumber</span>
-              <span class="stack-pill">HTML/JS</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Denwacho -->
-        <div class="portfolio-card glass-card reveal">
-          <div class="portfolio-card-content">
-            <span class="portfolio-card-badge badge-tool">App Interactiva</span>
-            <h3>Denwacho Interactivo</h3>
-            <p>Programa operativo digital para reemplazo de bomba diésel SCI. Interfaz premium con tema oscuro/claro, soporte bilingüe ES/EN y exportación PDF multipágina.</p>
-            <div class="portfolio-card-stack">
-              <span class="stack-pill">HTML</span>
-              <span class="stack-pill">CSS</span>
-              <span class="stack-pill">JavaScript</span>
-              <span class="stack-pill">jsPDF</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Manos y Corazón -->
-        <div class="portfolio-card glass-card reveal">
-          <div class="portfolio-card-content">
-            <span class="portfolio-card-badge badge-social">Impacto Social</span>
-            <h3>Manos y Corazón</h3>
-            <p>Plataforma de gestión de donaciones y transparencia para proyecto de ayuda pediátrica. Dashboard público, escáner de tickets, panel administrativo con Supabase Auth.</p>
-            <div class="portfolio-card-stack">
-              <span class="stack-pill">React 19</span>
-              <span class="stack-pill">Vite</span>
-              <span class="stack-pill">Supabase</span>
-              <span class="stack-pill">RLS</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════ TECH STACK ═══════════════ -->
-  <section class="tech-section" id="tecnologias">
-    <div class="container">
-      <div class="tech-header reveal">
-        <span class="section-label">La Ventaja de la IA</span>
-        <h2 class="section-title">Desarrollo Acelerado por <span class="gradient-text">Inteligencia Artificial</span></h2>
-        <p class="section-subtitle">
-          No te aburriremos con jerga técnica. Nuestro secreto es combinar ingenieros expertos con Agentes de IA avanzados. Esto nos permite escribir código perfecto más rápido, reduciendo los costos y los tiempos de entrega de meses a tan solo días.
-        </p>
-      </div>
-
-      <div class="tech-grid reveal">
-        <div class="tech-item glass-card">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tech-icon"><circle cx="12" cy="12" r="1"/><path d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z"/><path d="M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5Z"/></svg>
-          <span class="tech-item-name">React</span>
-        </div>
-        <div class="tech-item glass-card">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tech-icon"><path d="m3 21 9-18 9 18H3z"/></svg>
-          <span class="tech-item-name">Next.js</span>
-        </div>
-        <div class="tech-item glass-card">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tech-icon"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
-          <span class="tech-item-name">TypeScript</span>
-        </div>
-        <div class="tech-item glass-card">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tech-icon"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          <span class="tech-item-name">Vite</span>
-        </div>
-        <div class="tech-item glass-card">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tech-icon"><path d="M12 2l9 4.9V17L12 22l-9-4.9V7z"/></svg>
-          <span class="tech-item-name">Prisma</span>
-        </div>
-        <div class="tech-item glass-card">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tech-icon"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-          <span class="tech-item-name">Supabase</span>
-        </div>
-        <div class="tech-item glass-card">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tech-icon"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
-          <span class="tech-item-name">PostgreSQL</span>
-        </div>
-        <div class="tech-item glass-card">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tech-icon"><line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/></svg>
-          <span class="tech-item-name">Chart.js</span>
-        </div>
-        <div class="tech-item glass-card">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tech-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" x2="7.01" y1="7" y2="7"/></svg>
-          <span class="tech-item-name">Tailwind</span>
-        </div>
-        <div class="tech-item glass-card">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tech-icon"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          <span class="tech-item-name">Netlify</span>
-        </div>
-        <div class="tech-item glass-card">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tech-icon"><path d="M2 12h20"/><path d="M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"/><path d="M4 12v-2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2"/><path d="M9 8V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"/></svg>
-          <span class="tech-item-name">Docker</span>
-        </div>
-        <div class="tech-item glass-card">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tech-icon"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M12 8v8"/><path d="m8.5 14 7-4"/><path d="m8.5 10 7 4"/></svg>
-          <span class="tech-item-name">AI Agents</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════ INDUSTRIES ═══════════════ -->
-  <section class="industries-section" id="industrias">
-    <div class="container">
-      <div class="industries-header reveal">
-        <span class="section-label">Industrias</span>
-        <h2 class="section-title">Soluciones para <span class="gradient-text">sectores clave</span></h2>
-        <p class="section-subtitle">
-          Entendemos los procesos de empresas de servicios técnicos porque trabajamos dentro de ellas.
-        </p>
-      </div>
-
-      <div class="industries-grid reveal">
-        <div class="industry-card glass-card">
-          <div class="industry-icon-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1"/><path d="M13 18h1"/><path d="M9 18h1"/></svg>
-          </div>
-          <h4>Manufactura</h4>
-          <p>KPIs de mantenimiento y pólizas de servicio industrial</p>
-        </div>
-        <div class="industry-card glass-card">
-          <div class="industry-icon-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-          </div>
-          <h4>Servicios Industriales</h4>
-          <p>Gestión de actividades de ingeniería y seguimiento comercial</p>
-        </div>
-        <div class="industry-card glass-card">
-          <div class="industry-icon-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M12 4v5"/><path d="M12 15v5"/><path d="M4 12h5"/><path d="M15 12h5"/></svg>
-          </div>
-          <h4>Empresas con ERP</h4>
-          <p>Inteligencia comercial y auditorías automatizadas desde Odoo</p>
-        </div>
-        <div class="industry-card glass-card">
-          <div class="industry-icon-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-          </div>
-          <h4>Construcción</h4>
-          <p>Programas operativos interactivos y paneles de negociación</p>
-        </div>
-        <div class="industry-card glass-card">
-          <div class="industry-icon-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
-          </div>
-          <h4>ONGs</h4>
-          <p>Plataformas de donaciones, transparencia y rendición de cuentas</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════ CTA ═══════════════ -->
-  <section class="cta-section" id="contacto">
-    <div class="container">
-      <div class="cta-card reveal">
-        <span class="section-label" style="justify-content: center;">Contacto</span>
-        <h2>¿Tienes un proceso que necesita ser <span class="gradient-text">digitalizado</span>?</h2>
-        <p>Conversemos sobre cómo una solución digital a medida puede transformar tu operación. Sin compromiso, sin PowerPoints genéricos — solo una conversación honesta sobre tu problema.</p>
-        <div class="cta-actions">
-          <button type="button" class="btn btn-primary" id="open-contact-btn">
-            Conversemos
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" /></svg>
-          </button>
+          <h3>Desarrollo Web & Apps a Medida</h3>
+          <p>Ingeniería de software rápida y moderna. Creamos plataformas industriales y aplicaciones comerciales ajustadas exactamente a tu modelo de negocio.</p>
         </div>
       </div>
     </div>
@@ -503,252 +480,59 @@
 
   <!-- ═══════════════ FOOTER ═══════════════ -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="#" class="nav-brand">
-            <img src="logo.png" alt="Chiguirelabs" width="36" height="36">
-            <span>Chiguire<span style="color: var(--clr-primary)">labs</span></span>
-          </a>
-          <p>Estudio de ingeniería de software especializado en soluciones digitales a medida para empresas industriales y organizaciones. Combinamos desarrollo web moderno con inteligencia artificial.</p>
-        </div>
-        <div>
-          <h5>Servicios</h5>
-          <ul>
-            <li><a href="#servicios">Plataformas Web</a></li>
-            <li><a href="#servicios">Dashboards</a></li>
-            <li><a href="#servicios">Integraciones ERP</a></li>
-            <li><a href="#servicios">Consultoría IA</a></li>
-          </ul>
-        </div>
-        <div>
-          <h5>Portfolio</h5>
-          <ul>
-            <li><a href="#portfolio">Perry App</a></li>
-            <li><a href="#portfolio">Oráculo Odoo</a></li>
-            <li><a href="#portfolio">Visor Andenes</a></li>
-            <li><a href="#portfolio">Manos y Corazón</a></li>
-          </ul>
-        </div>
-        <div>
-          <h5>Contacto</h5>
-          <ul>
-            <li><a href="#contacto" class="contact-form-trigger">Enviar mensaje</a></li>
-          </ul>
+    <div class="container footer-inner">
+      <div class="footer-brands">
+        <a href="#" class="nav-brand">
+          <img src="images/logo.png" alt="Chiguirelabs Logo" class="chiguire-logo-img">
+          <span>Chiguire<span style="color: var(--clr-primary)">labs</span></span>
+        </a>
+        <span style="color: var(--clr-text-dim);">|</span>
+        <div class="product-pill">
+          <img src="images/omnichat_logo_pulse.jpg" alt="OmniChat Logo" class="omnichat-mini-logo">
+          <span>OmniChat</span>
         </div>
       </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Chiguirelabs. Todos los derechos reservados.</span>
+
+      <p style="color: var(--clr-text-muted); font-size: 0.95rem; max-width: 540px;">
+        <strong>OmniChat</strong> — Inteligencia Operativa en WhatsApp. Diseñado y desarrollado por el estudio de ingeniería de software <strong>Chiguirelabs</strong>.
+      </p>
+
+      <div class="footer-credits">
+        © 2026 Chiguirelabs. Todos los derechos reservados.
       </div>
     </div>
   </footer>
 
-  <!-- ═══════════════ CONTACT FORM MODAL ═══════════════ -->
-  <dialog id="contact-dialog" class="contact-dialog">
-    <div class="contact-dialog-inner">
-      <button type="button" class="contact-close" id="close-contact-btn" aria-label="Cerrar formulario">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
-      </button>
-      <h3 class="contact-dialog-title">Cuéntanos sobre tu proyecto</h3>
-      <p class="contact-dialog-subtitle">Responderemos en menos de 24 horas.</p>
-
-      <form id="contact-form" class="contact-form">
-        <input type="hidden" name="access_key" value="7f0a7605-dabf-45db-bd2b-888918e735d1">
-        <input type="hidden" name="subject" value="Nuevo contacto desde Chiguirelabs">
-        <input type="hidden" name="from_name" value="Chiguirelabs Web">
-        <input type="checkbox" name="botcheck" style="display: none;">
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="contact-name">Nombre *</label>
-            <input type="text" id="contact-name" name="name" placeholder="Tu nombre completo" required autocomplete="name">
-          </div>
-          <div class="form-group">
-            <label for="contact-email">Email *</label>
-            <input type="email" id="contact-email" name="email" placeholder="tu@empresa.com" required autocomplete="email">
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="contact-phone">Teléfono</label>
-            <input type="tel" id="contact-phone" name="phone" placeholder="+52 123 456 7890" autocomplete="tel">
-          </div>
-          <div class="form-group">
-            <label for="contact-company">Empresa</label>
-            <input type="text" id="contact-company" name="company" placeholder="Nombre de tu empresa" autocomplete="organization">
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="contact-message">Mensaje *</label>
-          <textarea id="contact-message" name="message" rows="4" placeholder="Describe brevemente tu proyecto o necesidad..." required></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-full" id="contact-submit">
-          <span class="btn-text">Enviar Mensaje</span>
-          <span class="btn-loading" style="display:none;">
-            <svg class="spinner-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" opacity="0.25"></circle><path fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path></svg>
-            Enviando...
-          </span>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" /></svg>
-        </button>
-      </form>
-
-      <!-- Success state -->
-      <div id="contact-success" class="contact-success" style="display:none;">
-        <div class="success-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="48" height="48"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
-        </div>
-        <h3>¡Mensaje enviado!</h3>
-        <p>Gracias por contactarnos. Te responderemos pronto.</p>
-        <button type="button" class="btn btn-ghost" onclick="document.getElementById('contact-dialog').close()">Cerrar</button>
-      </div>
-    </div>
-  </dialog>
-
   <!-- ═══════════════ SCRIPTS ═══════════════ -->
   <script>
-    // Navigation scroll effect
+    // Navigation Scroll Effect
     const nav = document.getElementById('main-nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 40);
     }, { passive: true });
 
-    // Mobile menu toggle
+    // Mobile Menu Toggle
     const navToggle = document.getElementById('nav-toggle');
     const navLinks = document.getElementById('nav-links');
     navToggle.addEventListener('click', () => {
       navLinks.classList.toggle('open');
-      const isOpen = navLinks.classList.contains('open');
-      navToggle.setAttribute('aria-expanded', isOpen);
     });
 
-    // Close mobile menu on link click
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => navLinks.classList.remove('open'));
-    });
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', e => {
-        const target = document.querySelector(anchor.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-    });
-
-    // ── Contact Form Modal ──
-    const dialog = document.getElementById('contact-dialog');
-    const contactForm = document.getElementById('contact-form');
-    const contactSuccess = document.getElementById('contact-success');
-
-    // Open modal
-    document.getElementById('open-contact-btn').addEventListener('click', () => {
-      contactForm.style.display = '';
-      contactSuccess.style.display = 'none';
-      dialog.showModal();
-    });
-
-    // Also open from nav CTA
-    document.querySelectorAll('.nav-cta').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        contactForm.style.display = '';
-        contactSuccess.style.display = 'none';
-        dialog.showModal();
-      });
-    });
-
-    // Also trigger from footer link
-    document.querySelectorAll('.contact-form-trigger').forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        contactForm.style.display = '';
-        contactSuccess.style.display = 'none';
-        dialog.showModal();
-      });
-    });
-
-    // Close modal
-    document.getElementById('close-contact-btn').addEventListener('click', () => dialog.close());
-    dialog.addEventListener('click', (e) => {
-      if (e.target === dialog) dialog.close();
-    });
-
-    // Form submission
-    contactForm.addEventListener('submit', async (e) => {
+    // Form Submission Handler
+    const form = document.getElementById('omnichat-form');
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const submitBtn = document.getElementById('contact-submit');
-      const btnText = submitBtn.querySelector('.btn-text');
-      const btnLoading = submitBtn.querySelector('.btn-loading');
+      const formData = new FormData(form);
+      const name = formData.get('fullname');
+      const email = formData.get('email');
+      const phone = formData.get('phone');
+      const company = formData.get('company');
+      const groups = formData.get('groups_count');
+      const challenge = formData.get('challenge') || 'N/A';
 
-      submitBtn.disabled = true;
-      btnText.style.display = 'none';
-      btnLoading.style.display = 'inline-flex';
-
-      try {
-        const formData = new FormData(contactForm);
-        const res = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          body: formData
-        });
-        const data = await res.json();
-
-        if (data.success) {
-          contactForm.style.display = 'none';
-          contactSuccess.style.display = 'flex';
-          contactForm.reset();
-        } else {
-          // Fallback: open mailto with form data
-          const name = formData.get('name');
-          const email = formData.get('email');
-          const phone = formData.get('phone') || 'N/A';
-          const company = formData.get('company') || 'N/A';
-          const message = formData.get('message');
-          const body = `Nombre: ${name}%0AEmail: ${email}%0ATeléfono: ${phone}%0AEmpresa: ${company}%0A%0AMensaje:%0A${message}`;
-          window.open(`mailto:lopezboyer@gmail.com?subject=Contacto Chiguirelabs - ${name}&body=${body}`, '_self');
-          dialog.close();
-        }
-      } catch {
-        // Fallback: open mailto
-        const formData = new FormData(contactForm);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const phone = formData.get('phone') || 'N/A';
-        const company = formData.get('company') || 'N/A';
-        const message = formData.get('message');
-        const body = `Nombre: ${name}%0AEmail: ${email}%0ATeléfono: ${phone}%0AEmpresa: ${company}%0A%0AMensaje:%0A${message}`;
-        window.open(`mailto:lopezboyer@gmail.com?subject=Contacto Chiguirelabs - ${name}&body=${body}`, '_self');
-        dialog.close();
-      } finally {
-        submitBtn.disabled = false;
-        btnText.style.display = '';
-        btnLoading.style.display = 'none';
-      }
+      const body = `Diagnóstico Operativo OmniChat:%0A%0ANombre: ${name}%0AEmail: ${email}%0ATeléfono: ${phone}%0AEmpresa: ${company}%0AGrupos activos: ${groups}%0AReto principal:%0A${challenge}`;
+      window.open(`mailto:lopezboyer@gmail.com?subject=Diagnóstico OmniChat - ${company}&body=${body}`, '_self');
     });
-
-    // Fallback reveal animation for browsers without scroll-driven animations
-    if (!CSS.supports('animation-timeline', 'view()')) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.translate = 'none';
-            entry.target.style.transition = 'opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), translate 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1 });
-
-      document.querySelectorAll('.reveal').forEach(el => {
-        el.style.opacity = '0';
-        el.style.translate = '0 40px';
-        observer.observe(el);
-      });
-    }
   </script>
 
 </body>

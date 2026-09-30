@@ -261,7 +261,7 @@ button, input, select, textarea {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.8rem;
+  gap: 1.25rem;
   font-size: 0.92rem;
   font-weight: 500;
 }
@@ -274,6 +274,39 @@ button, input, select, textarea {
 
 .nav-links a:hover {
   color: var(--clr-wa-green);
+}
+
+.nav-links .nav-business-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid rgba(124, 92, 252, 0.6);
+  border-radius: var(--radius-pill);
+  background: linear-gradient(135deg, rgba(0, 229, 195, 0.1), rgba(124, 92, 252, 0.18));
+  color: var(--clr-text);
+  font-weight: 700;
+  white-space: nowrap;
+  box-shadow: 0 0 22px rgba(124, 92, 252, 0.12);
+}
+
+.nav-links .nav-business-link:hover {
+  color: #fff;
+  border-color: var(--clr-primary);
+  background: linear-gradient(135deg, rgba(0, 229, 195, 0.18), rgba(124, 92, 252, 0.26));
+  transform: translateY(-1px);
+}
+
+.nav-new-badge {
+  padding: 0.14rem 0.42rem;
+  border-radius: var(--radius-pill);
+  background: var(--clr-accent);
+  color: #fff;
+  font-size: 0.61rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
 .nav-cta {
@@ -1646,6 +1679,11 @@ button, input, select, textarea {
     width: 100%;
     text-align: center;
     padding: 0.5rem 0;
+  }
+
+  .nav-links .nav-business-link {
+    justify-content: center;
+    padding: 0.8rem 1rem;
   }
 
   .nav-cta {

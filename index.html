@@ -632,22 +632,22 @@
 
           <div>
             <label class="form-label" for="fullname">Nombre completo *</label>
-            <input type="text" id="fullname" name="fullname" class="form-input" placeholder="Ej. Carlos Mendoza" required>
+            <input type="text" id="fullname" name="fullname" class="form-input" placeholder="Ej. Carlos Mendoza" maxlength="100" required>
           </div>
 
           <div>
             <label class="form-label" for="email">Correo corporativo *</label>
-            <input type="email" id="email" name="email" class="form-input" placeholder="carlos@tuempresa.com" required>
+            <input type="email" id="email" name="email" class="form-input" placeholder="carlos@tuempresa.com" maxlength="254" required>
           </div>
 
           <div>
             <label class="form-label" for="phone">Número de WhatsApp / Teléfono *</label>
-            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+58 412 123 4567" required>
+            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+52 664 000 0000" maxlength="30" required>
           </div>
 
           <div>
             <label class="form-label" for="company">Nombre de la empresa *</label>
-            <input type="text" id="company" name="company" class="form-input" placeholder="Ej. Logística e Industrias del Norte" required>
+            <input type="text" id="company" name="company" class="form-input" placeholder="Ej. Logística e Industrias del Norte" maxlength="120" required>
           </div>
 
           <div class="form-group-full">
@@ -670,7 +670,7 @@
 
           <div class="form-group-full">
             <label class="form-label" for="challenge">Breve descripción del principal reto de comunicación o seguimiento que enfrentan hoy</label>
-            <textarea id="challenge" name="challenge" rows="4" class="form-textarea" placeholder="Ej. Los repuestos tardan en autorizarse entre el grupo de compras y mantenimiento, perdiendo la traza de los incidentes..."></textarea>
+            <textarea id="challenge" name="challenge" rows="4" class="form-textarea" maxlength="1500" placeholder="Ej. Los repuestos tardan en autorizarse entre el grupo de compras y mantenimiento, perdiendo la traza de los incidentes..."></textarea>
           </div>
 
           <div class="form-group-full" style="text-align: center; margin-top: 1rem;">
@@ -1110,8 +1110,18 @@
       const groups = formData.get('groups_count') || '';
       const challenge = formData.get('challenge') || 'N/A';
 
-      const body = `Diagnóstico Operativo OmniChat:%0A%0ANombre: ${name}%0AEmail: ${email}%0ATeléfono: ${phone}%0AEmpresa: ${company}%0AGrupos activos: ${groups}%0AReto principal:%0A${challenge}`;
-      window.open(`mailto:lopezboyer@gmail.com?subject=Diagnóstico OmniChat - ${company}&body=${body}`, '_self');
+      const subject = encodeURIComponent(`Diagnóstico OmniChat - ${company}`);
+      const body = encodeURIComponent(
+        `Diagnóstico Operativo OmniChat:\n\n` +
+        `Nombre: ${name}\n` +
+        `Email: ${email}\n` +
+        `Teléfono: ${phone}\n` +
+        `Empresa: ${company}\n` +
+        `Grupos activos: ${groups}\n` +
+        `Reto principal:\n${challenge}`
+      );
+
+      window.location.href = `mailto:lopezboyer@gmail.com?subject=${subject}&body=${body}`;
     }
 
     function resetEvalForm() {

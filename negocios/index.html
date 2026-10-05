@@ -304,17 +304,17 @@
             <div class="field-row">
               <label>
                 <span>Nombre completo *</span>
-                <input name="fullname" type="text" autocomplete="name" required placeholder="Tu nombre">
+                <input name="fullname" type="text" autocomplete="name" maxlength="100" required placeholder="Tu nombre">
               </label>
               <label>
                 <span>WhatsApp / teléfono *</span>
-                <input name="phone" type="tel" autocomplete="tel" required placeholder="664 000 0000">
+                <input name="phone" type="tel" autocomplete="tel" maxlength="30" required placeholder="664 000 0000">
               </label>
             </div>
 
             <label>
               <span>Nombre o tipo de negocio *</span>
-              <input name="business" type="text" required placeholder="Ej. Restaurante, taller, despacho...">
+              <input name="business" type="text" maxlength="120" required placeholder="Ej. Restaurante, taller, despacho...">
             </label>
 
             <label>
@@ -333,7 +333,7 @@
 
             <label>
               <span>Cuéntanos brevemente qué está pasando</span>
-              <textarea name="challenge" rows="4" placeholder="Ej. Se nos pierden compromisos entre mensajes y no sabemos quién debe darles seguimiento."></textarea>
+              <textarea name="challenge" rows="4" maxlength="1500" placeholder="Ej. Se nos pierden compromisos entre mensajes y no sabemos quién debe darles seguimiento."></textarea>
             </label>
 
             <label>

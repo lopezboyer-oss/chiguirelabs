@@ -38,19 +38,27 @@
       </div>
       
       <div class="nav-links" id="nav-links">
-        <a href="#hero">Inicio</a>
-        <a href="#solucion">Cómo Funciona</a>
-        <a href="#casos-industria">Casos por Industria</a>
-        <a href="#estudio">Chiguirelabs Studio</a>
-        <a href="negocios/" class="nav-business-link">
-          <span class="nav-new-badge">Nuevo</span>
-          Acompañamiento con IA
-        </a>
+        <a href="#solucion">OmniChat</a>
+        <a href="#casos-industria">Casos por industria</a>
+        <details class="nav-services">
+          <summary>Asesoría con IA</summary>
+          <div class="nav-services-menu">
+            <a href="negocios/">
+              <strong>Presencial</strong>
+              <small>Playas de Tijuana</small>
+            </a>
+            <a href="negocios/en-linea/">
+              <strong>En línea</strong>
+              <small>Disponible en todo México</small>
+            </a>
+          </div>
+        </details>
+        <a href="#estudio">Cómo trabajamos</a>
         <a href="https://www.facebook.com/profile.php?id=61595078994341" class="nav-facebook-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Chiguire Labs">
           <span class="facebook-mark" aria-hidden="true">f</span>
           <span class="nav-facebook-text">Facebook</span>
         </a>
-        <a href="#evaluacion" class="btn btn-primary nav-cta">Evaluar OmniChat</a>
+        <a href="https://wa.me/526641214859?text=Hola.%20Quiero%20conocer%20las%20soluciones%20de%20Chiguire%20Labs." class="btn btn-primary nav-cta" target="_blank" rel="noopener">Hablar por WhatsApp</a>
       </div>
 
       <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
@@ -791,7 +799,13 @@
       link.addEventListener('click', () => {
         navLinks.classList.remove('open');
         navToggle.setAttribute('aria-expanded', 'false');
+        navLinks.querySelectorAll('details[open]').forEach(details => details.removeAttribute('open'));
       });
+    });
+
+    document.addEventListener('click', event => {
+      const services = navLinks.querySelector('.nav-services');
+      if (services?.open && !services.contains(event.target)) services.removeAttribute('open');
     });
 
     // ─── 6 Ultra-Realistic Industry Data Object ───

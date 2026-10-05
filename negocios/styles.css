@@ -942,6 +942,32 @@ textarea:focus {
   opacity: 0;
 }
 
+.privacy-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
+.privacy-consent input {
+  width: 18px;
+  min-height: 18px;
+  height: 18px;
+  margin-top: 2px;
+  padding: 0;
+  flex: 0 0 auto;
+  accent-color: var(--green);
+}
+
+.privacy-consent a,
+.footer-privacy-link {
+  color: var(--green);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .submit-button {
   width: 100%;
   margin-top: 4px;
@@ -1011,6 +1037,10 @@ footer {
 
 .footer-inner small {
   font-size: 0.72rem;
+}
+
+.footer-privacy-link {
+  font-size: 0.78rem;
 }
 
 .whatsapp-float {

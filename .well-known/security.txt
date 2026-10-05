@@ -1,0 +1,5 @@
+Contact: mailto:lopezboyer@gmail.com
+Expires: 2027-10-04T23:59:59Z
+Preferred-Languages: es, en
+Canonical: https://chiguirelabs.com/.well-known/security.txt
+Policy: https://chiguirelabs.com/privacidad/

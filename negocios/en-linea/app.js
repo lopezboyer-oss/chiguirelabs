@@ -64,6 +64,7 @@ function openEmailFallback(formData) {
   const priority = formData.get('priority') || '';
   const preferredTime = formData.get('preferred_time') || '';
   const challenge = formData.get('challenge') || 'Sin descripción';
+  const privacyConsent = formData.get('privacy_consent') || 'No';
 
   const subject = encodeURIComponent(`Solicitud: Construye tu solución con IA - ${business}`);
   const body = encodeURIComponent(
@@ -72,6 +73,7 @@ function openEmailFallback(formData) {
     `Negocio: ${business}\n` +
     `Prioridad: ${priority}\n` +
     `Horario preferido: ${preferredTime}\n\n` +
+    `Aviso de privacidad aceptado: ${privacyConsent}\n\n` +
     `Situación actual:\n${challenge}`
   );
 

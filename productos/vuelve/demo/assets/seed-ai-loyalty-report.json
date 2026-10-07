@@ -1,0 +1,66 @@
+{
+  "provider": "Google Gemini",
+  "model": "gemini-3.8-flash",
+  "synthetic": true,
+  "generatedAt": "2026-10-07T19:46:51.331Z",
+  "summary": "Análisis del periodo del 8 de septiembre al 7 de octubre de 2026 basado en una muestra sintética de 101 clientes y 384 tickets. Se presentan cinco recomendaciones prioritarias enfocadas en recurrencia por turnos, programa de Granos y participación de grupos demográficos, respetando la reserva de datos económicos.",
+  "recommendations": [
+    {
+      "focus": "operations",
+      "finding": "En el turno de mediodía se registraron 48 visitas únicas sin clientes recurrentes en esta muestra sintética.",
+      "evidence": "En la muestra, el mediodía sumó 48 tickets y 48 clientes con cero clientes recurrentes, frente a la mañana con 149 tickets y 52 recurrentes. Se registraron 26 tickets de temporada y 22 de americano al mediodía.",
+      "action": "Prueba otorgar el doble de Granos (multiplicador 2) en americano o bebida de temporada entre 12:00 y 15:00 horas durante dos semanas para impulsar una segunda visita.",
+      "measurement": "Compara tickets totales y clientes recurrentes en mediodía durante las dos semanas de prueba frente a las semanas previas.",
+      "limitations": "Esta muestra sintética no incluye horarios exactos de apertura ni duración de turnos. Se debe revisar con el dueño antes de aplicarla."
+    },
+    {
+      "focus": "loyalty",
+      "finding": "El programa registró 29 canjes de Granos frente a 90 clientes recurrentes y 384 tickets en la muestra.",
+      "evidence": "En esta muestra sintética hubo 29 canjes entre 101 clientes activos y 384 tickets totales. El americano sumó 200 tickets y la bebida de temporada 184 tickets, mientras que alimento registró 102 tickets.",
+      "action": "Ofrece un multiplicador de 1.5 en Granos al pedir un alimento junto con un americano durante la mañana por tres semanas, disponible para cualquier cliente registrado.",
+      "measurement": "Mide el número de canjes y la cantidad de tickets que combinen alimento y americano durante las tres semanas del piloto.",
+      "limitations": "No conocemos el saldo previo de Granos, reglas de canje ni catálogo vigente. Requiere aprobación del dueño antes de iniciar la prueba."
+    },
+    {
+      "focus": "audience",
+      "finding": "El grupo de 18 a 24 años muestra mayor frecuencia de tickets por cliente que el grupo de 35 a 44 años.",
+      "evidence": "En estos datos sintéticos, 15 clientes de 18 a 24 años generaron 72 tickets (4.8 por cliente) y 15 recurrentes. En contraste, 14 clientes de 35 a 44 años sumaron 39 tickets (2.78 por cliente) y 8 recurrentes.",
+      "action": "Lanza para todos los clientes una prueba de dos semanas con multiplicador 1.5 de Granos al comprar bebida de temporada por la tarde, franja con 96 tickets registrados.",
+      "measurement": "Monitorea la cantidad de tickets totales y clientes recurrentes en cada rango de edad durante los 14 días del experimento.",
+      "limitations": "Son patrones de una muestra sintética pequeña. No conocemos la capacidad del local ni horarios de apertura. Revisar antes de ejecutar la acción."
+    },
+    {
+      "focus": "audience",
+      "finding": "Existen registros con datos demográficos faltantes y distinta distribución de productos entre géneros en la muestra sintética.",
+      "evidence": "Se registraron 33 mujeres con 88 tickets de temporada y 32 de americano; 31 hombres con 29 de temporada y 95 de americano; 16 no binarios con 34 de temporada y 32 de americano. Faltan datos de 21 clientes.",
+      "action": "Ofrece a todos los clientes un multiplicador de 1.5 en Granos en la compra de cualquier bebida (americano o temporada) durante la noche por dos semanas.",
+      "measurement": "Registra la cantidad de tickets nocturnos y la cantidad de perfiles con datos completos al concluir las dos semanas de prueba.",
+      "limitations": "Hay 21 clientes sin datos de género. Son patrones de esta muestra sintética; no reflejan preferencias demostradas. Requiere revisión previa del dueño."
+    },
+    {
+      "focus": "operations",
+      "finding": "La sucursal Playas acumuló más tickets y clientes recurrentes que Cacho en los registros analizados.",
+      "evidence": "En la muestra sintética, Playas registró 229 tickets y 76 clientes recurrentes sobre 94 clientes. Cacho registró 155 tickets y 62 clientes recurrentes sobre 88 clientes, con 81 tickets de temporada y 74 de americano.",
+      "action": "Prueba durante dos semanas otorgar multiplicador 1.5 en Granos en la compra de postres junto con americano en la sucursal Cacho para todo cliente registrado.",
+      "measurement": "Compara los tickets con postre y la recurrencia semanal en Cacho antes y durante las dos semanas de la prueba.",
+      "limitations": "No contamos con aforos ni horarios de atención por sucursal en esta muestra sintética. La propuesta debe validarse con el dueño antes de implementarse."
+    }
+  ],
+  "period": {
+    "start": "2026-09-08",
+    "end": "2026-10-07",
+    "days": 30,
+    "branch": "all"
+  },
+  "snapshotMetrics": {
+    "tickets": 384,
+    "repeatCustomers": 90,
+    "averageVisits": 3.722772277227723,
+    "redemptions": 29
+  },
+  "focuses": [
+    "operations",
+    "loyalty",
+    "audience"
+  ]
+}

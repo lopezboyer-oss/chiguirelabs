@@ -2068,3 +2068,5 @@ button, input, select, textarea {
     padding: 1.5rem 1rem;
   }
 }
+
+.products-section{padding:5rem 0;scroll-margin-top:100px}.labs-products{display:grid;grid-template-columns:1fr 1fr;gap:24px}.labs-product{padding:32px;border:1px solid rgba(255,255,255,.14);border-radius:20px;background:rgba(255,255,255,.025)}.labs-product h3{font-size:32px;margin:16px 0}.labs-product p{line-height:1.7;margin:0 0 24px}.vuelve-product{background:#faf4ec;color:#3b2419;border-color:#e4d6c8}.vuelve-product .section-label{color:#9b6038;background:#efe2d4;border-color:#dfc6ae}.vuelve-product .btn-primary{background:#3b2419;color:#faf4ec;border-color:#3b2419}.product-demo-link{display:inline-block;margin:16px 0 0 20px;color:#3b2419}.vuelve-product h3{letter-spacing:-1px}@media(max-width:768px){.labs-products{grid-template-columns:1fr}.labs-product{padding:24px}.product-demo-link{margin-left:0}.products-section{padding:3rem 0}}

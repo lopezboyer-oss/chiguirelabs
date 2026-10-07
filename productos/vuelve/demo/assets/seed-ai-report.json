@@ -1,0 +1,68 @@
+{
+  "provider": "Google Gemini",
+  "model": "gemini-3.8-flash",
+  "synthetic": true,
+  "generatedAt": "2026-10-07T03:02:21.534Z",
+  "recommendations": [
+    {
+      "focus": "operations",
+      "finding": "El horario de mediodía presenta el ticket más bajo y cero clientes recurrentes registrados en el periodo.",
+      "evidence": "Mediodía generó 4,200 MXN en 48 tickets con ticket promedio de 87.50 MXN y 0 clientes recurrentes, frente a la mañana con 17,850 MXN, 149 tickets, promedio de 119.80 MXN y 52 clientes recurrentes.",
+      "action": "Lanzar una prueba de combo de café americano con alimento entre 12:00 y 15:00 horas ofreciendo 10 MXN de descuento a todo público.",
+      "measurement": "Contar tickets en mediodía y comparar el ticket promedio contra los 87.50 MXN actuales durante cuatro semanas.",
+      "limitations": "Muestra sintética. Se desconocen horarios exactos de apertura y duración real de cada franja horaria."
+    },
+    {
+      "focus": "loyalty",
+      "finding": "El programa registra pocas redenciones frente a la alta base de clientes recurrentes en cafetería.",
+      "evidence": "Existen 90 clientes recurrentes de 101 activos, pero solo 29 redenciones totales. Además, la categoría postre sumó 80 tickets con apenas 2 clientes recurrentes.",
+      "action": "Probar un sello extra canjeable por una porción de postre al acumular cuatro consumos de bebidas de temporada o americano.",
+      "measurement": "Registrar tasa de redención semanal y evolución de tickets repetidos en postres respecto a los 2 actuales.",
+      "limitations": "Datos sintéticos. No se detallan reglas vigentes de lealtad ni historial previo de redención por cliente."
+    },
+    {
+      "focus": "economic",
+      "finding": "La sucursal Cacho tiene menor volumen de ventas y menor ticket promedio que Playas.",
+      "evidence": "Playas aportó 27,600 MXN en 229 tickets con promedio de 120.52 MXN. Cacho registró 15,460 MXN en 155 tickets y ticket promedio de 99.74 MXN.",
+      "action": "Implementar en Cacho una sugerencia de maridaje de café americano con postre, ofreciendo 5 MXN de descuento general en el paquete.",
+      "measurement": "Medir el incremento semanal del ticket promedio en Cacho buscando superar los 99.74 MXN de base.",
+      "limitations": "Cifras sintéticas de 30 días. No incluye estructura de costos de renta ni personal por sucursal."
+    },
+    {
+      "focus": "audience",
+      "finding": "Los clientes de 18 a 24 años muestran máxima recurrencia pero un ticket inferior a otros grupos.",
+      "evidence": "El grupo 18–24 registró 15 clientes, todos recurrentes (15), 72 tickets y ticket de 108.26 MXN. El segmento 25–34 promedió 110.29 MXN y 45+ logró 110.98 MXN.",
+      "action": "Introducir para todo el público un paquete vespertino de bebida con alimento ligero para incentivar consumo de mayor valor sin discriminar por edad.",
+      "measurement": "Monitorear el ticket promedio general en la tarde y el promedio por ticket en compras con alimentos.",
+      "limitations": "Base sintética pequeña. No se debe asumir capacidad de gasto fija por tramo de edad."
+    },
+    {
+      "focus": "audience",
+      "finding": "El ticket promedio varía entre géneros, destacando mayor gasto por ticket en mujeres y personas no binarias.",
+      "evidence": "Mujeres promediaron 116.75 MXN en 120 tickets (88 de temporada). No binario promedió 113.26 MXN en 66 tickets. Hombres promediaron 104.23 MXN en 124 tickets (95 americano).",
+      "action": "Crear una degustación abierta de bebidas de temporada junto a café americano para invitar a toda la clientela a probar opciones de mayor valor.",
+      "measurement": "Comparar la proporción semanal de bebidas de temporada vendidas y el ticket promedio global.",
+      "limitations": "Muestra sintética. Los datos demográficos son parciales y no deben motivar tratos ni precios diferenciados."
+    }
+  ],
+  "period": {
+    "start": "2026-09-07",
+    "end": "2026-10-06",
+    "days": 30,
+    "branch": "all"
+  },
+  "snapshotMetrics": {
+    "sales": 43060,
+    "tickets": 384,
+    "averageTicket": 112.13541666666667,
+    "repeatCustomers": 90,
+    "averageVisits": 3.722772277227723,
+    "redemptions": 29
+  },
+  "focuses": [
+    "economic",
+    "operations",
+    "loyalty",
+    "audience"
+  ]
+}

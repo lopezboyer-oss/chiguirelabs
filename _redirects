@@ -1,0 +1,2 @@
+/vuelve /productos/vuelve/ 301
+/vuelve/* /productos/vuelve/:splat 301

@@ -73,5 +73,5 @@ if(role==='cliente'){
 render();
 if(role==='cliente'){
  const examples=document.createElement('details');examples.innerHTML='<summary>Explorar Costalitos de ejemplo</summary>';
- for(const [id,label] of [['DEMO-ANA','Ana · recompensas acumuladas'],['DEMO-DIEGO','Diego · tarjeta en progreso'],['DEMO-LUCIA','Lucía · tarjeta completa']]){const button=document.createElement('button');button.className='tab';button.textContent=label;button.onclick=()=>{chooseCustomer(id);localStorage.setItem('vuelve-demo-client-id',id);render();};examples.append(button);}clientPanel.append(examples);
+ for(const [id,label] of [['DEMO-ANA','Ana · recompensas acumuladas'],['DEMO-DIEGO','Diego · tarjeta en progreso'],['DEMO-LUCIA','Lucía · tarjeta completa']]){const button=document.createElement('button');button.className='tab';button.textContent=label;button.onclick=()=>{chooseCustomer(id);localStorage.setItem('vuelve-demo-client-id',id);const claim=$('demoClaim')?.closest('section');if(claim)claim.hidden=true;render();};examples.append(button);}clientPanel.append(examples);
 }

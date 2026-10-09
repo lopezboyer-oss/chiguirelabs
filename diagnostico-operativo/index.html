@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Diagnóstico operativo previo | Chiguire Labs</title>
+  <meta name="description" content="Cuestionario previo para preparar una llamada de diagnóstico operativo con Chiguire Labs.">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="../" aria-label="Chiguire Labs, inicio">
+      <img src="../images/logo.png" alt="" width="44" height="44">
+      <span>Chiguire<span>labs</span></span>
+    </a>
+    <div class="save-indicator" id="save-indicator" role="status" aria-live="polite">
+      <span></span> Guardado en este dispositivo
+    </div>
+  </header>
+
+  <main>
+    <section class="intro" id="intro">
+      <div class="intro-copy">
+        <p class="eyebrow">Preparación para nuestra conversación</p>
+        <h1>Primero entendamos <em>dónde conviene empezar.</em></h1>
+        <p class="lead">Este recorrido nos ayuda a elegir un problema concreto, visible y realista para profundizar durante una llamada de 30 minutos.</p>
+
+        <div class="intro-points">
+          <div><strong>8–10 min</strong><span>Selecciones sencillas, sin redactar respuestas largas.</span></div>
+          <div><strong>Avance guardado</strong><span>Puedes cerrar y continuar después en este mismo dispositivo.</span></div>
+          <div><strong>Evidencia opcional</strong><span>En cada opción puedes añadir audio o una fotografía.</span></div>
+        </div>
+
+        <div class="privacy-note">
+          <strong>Tú controlas la información.</strong>
+          <p>Las respuestas, fotografías y audios permanecen en este dispositivo. Al finalizar podrás descargar un expediente y decidir cómo compartirlo. Esta página no aparece en el menú del sitio, pero eso no la convierte en una página privada.</p>
+        </div>
+
+        <button class="primary-button" id="start-button" type="button">Comenzar diagnóstico <span aria-hidden="true">→</span></button>
+        <button class="text-button" id="resume-button" type="button" hidden>Continuar donde me quedé</button>
+      </div>
+
+      <aside class="intro-visual" aria-label="Qué obtendremos">
+        <div class="visual-label">AL FINAL TENDREMOS</div>
+        <div class="signal-card active">
+          <span>01</span>
+          <div><strong>Necesidad prioritaria</strong><small>Qué problema vale la pena entender primero</small></div>
+        </div>
+        <div class="signal-card">
+          <span>02</span>
+          <div><strong>Primer alcance posible</strong><small>Un avance visible, sin querer resolver todo a la vez</small></div>
+        </div>
+        <div class="signal-card">
+          <span>03</span>
+          <div><strong>Base para la propuesta</strong><small>Datos y decisiones que debemos confirmar en la llamada</small></div>
+        </div>
+        <div class="visual-foot">
+          <span class="pulse"></span>
+          Esto prepara la conversación. No genera una cotización automática.
+        </div>
+      </aside>
+    </section>
+
+    <section class="questionnaire" id="questionnaire" hidden>
+      <div class="progress-shell">
+        <div class="progress-meta">
+          <span id="section-label">Tu operación</span>
+          <span><strong id="progress-current">1</strong> de <strong id="progress-total">19</strong></span>
+        </div>
+        <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
+      </div>
+
+      <form id="diagnostic-form" novalidate>
+        <article class="question-card" id="question-card" tabindex="-1">
+          <div class="question-number" id="question-number">01</div>
+          <p class="question-kicker" id="question-kicker">Tu operación</p>
+          <h2 id="question-title"></h2>
+          <p class="question-help" id="question-help"></p>
+          <div class="options" id="options" role="group"></div>
+          <p class="validation" id="validation" role="alert" hidden></p>
+        </article>
+
+        <div class="form-navigation">
+          <button class="secondary-button" id="back-button" type="button">← Anterior</button>
+          <button class="primary-button" id="next-button" type="button">Continuar <span aria-hidden="true">→</span></button>
+        </div>
+      </form>
+    </section>
+
+    <section class="result" id="result" hidden>
+      <div class="result-heading">
+        <p class="eyebrow">Diagnóstico previo completo</p>
+        <h1>Ya tenemos una base para <em>conversar con enfoque.</em></h1>
+        <p>Estas sugerencias se generan de forma transparente a partir de tus selecciones. Las confirmaremos juntos antes de preparar cualquier propuesta.</p>
+      </div>
+
+      <div class="result-grid">
+        <article class="result-card primary-result">
+          <span class="result-label">Tema principal sugerido</span>
+          <h2 id="result-primary"></h2>
+          <p id="result-primary-reason"></p>
+        </article>
+        <article class="result-card">
+          <span class="result-label">Tema de respaldo</span>
+          <h3 id="result-secondary"></h3>
+          <p id="result-secondary-reason"></p>
+        </article>
+        <article class="result-card">
+          <span class="result-label">Primer alcance a explorar</span>
+          <h3 id="result-scope"></h3>
+          <p>Lo validaremos contra tus registros actuales y la forma real de trabajar.</p>
+        </article>
+        <article class="result-card">
+          <span class="result-label">Señal de éxito elegida</span>
+          <h3 id="result-success"></h3>
+          <p>Será nuestra referencia para evitar una solución demasiado amplia.</p>
+        </article>
+      </div>
+
+      <div class="score-panel">
+        <div class="score-heading">
+          <div>
+            <span class="result-label">Lectura para la llamada</span>
+            <h2>Impacto, facilidad y adopción</h2>
+          </div>
+          <span class="transparent-badge">Criterios visibles</span>
+        </div>
+        <div class="score-grid" id="score-grid"></div>
+        <div class="missing-box">
+          <strong>Información por confirmar antes de una propuesta</strong>
+          <ul id="missing-list"></ul>
+        </div>
+      </div>
+
+      <div class="export-panel">
+        <div>
+          <span class="result-label">Siguiente paso</span>
+          <h2>Descarga y comparte cuando tú decidas.</h2>
+          <p>El expediente HTML incluye respuestas, fotografías y audios. El resumen de texto no incluye archivos multimedia.</p>
+        </div>
+        <div class="export-actions">
+          <button class="primary-button" id="download-button" type="button">Descargar expediente</button>
+          <button class="secondary-button" id="copy-button" type="button">Copiar resumen</button>
+          <button class="text-button" id="review-button" type="button">Revisar respuestas</button>
+          <button class="danger-button" id="clear-button" type="button">Borrar de este dispositivo</button>
+        </div>
+        <p class="export-status" id="export-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <img src="../images/logo.png" alt="" width="34" height="34">
+    <span>Chiguire Labs · Diagnóstico operativo previo</span>
+  </footer>
+
+  <template id="evidence-template">
+    <div class="evidence" hidden>
+      <p><strong>¿Quieres añadir contexto a esta opción?</strong> Es completamente opcional.</p>
+      <div class="evidence-actions">
+        <button class="evidence-button record-button" type="button">● Grabar audio</button>
+        <label class="evidence-button photo-button">▣ Tomar o adjuntar foto<input type="file" accept="image/*" capture="environment"></label>
+      </div>
+      <div class="evidence-preview"></div>
+      <p class="evidence-message" role="status" aria-live="polite"></p>
+    </div>
+  </template>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

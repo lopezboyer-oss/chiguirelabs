@@ -41,7 +41,7 @@
 
         <div class="privacy-note">
           <strong>Tú controlas la información.</strong>
-          <p>Las respuestas, fotografías y audios permanecen en este dispositivo. Al finalizar podrás descargar un expediente y decidir cómo compartirlo. Esta página no aparece en el menú del sitio, pero eso no la convierte en una página privada.</p>
+          <p>Mientras respondes, la información permanece en este dispositivo. Solo se enviará al espacio privado de Chiguire Labs cuando al final pulses “Enviar respuestas”. Esta página no aparece en el menú del sitio, pero eso no la convierte en una página privada.</p>
         </div>
 
         <button class="primary-button" id="start-button" type="button">Comenzar diagnóstico <span aria-hidden="true">→</span></button>
@@ -143,14 +143,11 @@
       <div class="export-panel">
         <div>
           <span class="result-label">Siguiente paso</span>
-          <h2>Descarga y comparte cuando tú decidas.</h2>
-          <p>El expediente HTML incluye respuestas, fotografías y audios. El resumen de texto no incluye archivos multimedia.</p>
+          <h2>Envía tus respuestas a Chiguire Labs.</h2>
+          <p>Al pulsar el botón se enviará una copia de tus respuestas y evidencias al espacio privado de Chiguire Labs en Netlify. Hasta entonces, nada sale de este dispositivo.</p>
         </div>
         <div class="export-actions">
-          <button class="primary-button" id="download-button" type="button">Descargar expediente</button>
-          <button class="secondary-button" id="copy-button" type="button">Copiar resumen</button>
-          <button class="text-button" id="review-button" type="button">Revisar respuestas</button>
-          <button class="danger-button" id="clear-button" type="button">Borrar de este dispositivo</button>
+          <button class="primary-button" id="send-button" type="button">Enviar respuestas</button>
         </div>
         <p class="export-status" id="export-status" role="status" aria-live="polite"></p>
       </div>
@@ -173,6 +170,14 @@
       <p class="evidence-message" role="status" aria-live="polite"></p>
     </div>
   </template>
+
+  <form name="diagnostico-operativo" method="POST" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" hidden aria-hidden="true">
+    <input type="hidden" name="form-name" value="diagnostico-operativo">
+    <input type="text" name="bot-field" tabindex="-1" autocomplete="off">
+    <input type="text" name="title">
+    <textarea name="body"></textarea>
+    <input type="file" name="expediente">
+  </form>
 
   <script src="app.js" defer></script>
 </body>

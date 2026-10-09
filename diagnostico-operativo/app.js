@@ -150,14 +150,13 @@ const elements = {
   resultPrimary: document.getElementById('result-primary'), resultPrimaryReason: document.getElementById('result-primary-reason'),
   resultSecondary: document.getElementById('result-secondary'), resultSecondaryReason: document.getElementById('result-secondary-reason'),
   resultScope: document.getElementById('result-scope'), resultSuccess: document.getElementById('result-success'), scoreGrid: document.getElementById('score-grid'),
-  missingList: document.getElementById('missing-list'), download: document.getElementById('download-button'), copy: document.getElementById('copy-button'),
-  review: document.getElementById('review-button'), clear: document.getElementById('clear-button'), exportStatus: document.getElementById('export-status')
+  missingList: document.getElementById('missing-list'), send: document.getElementById('send-button'), exportStatus: document.getElementById('export-status')
 };
 
 const DB_NAME = 'chiguire-diagnostico';
 const STORE_NAME = 'drafts';
 const DRAFT_KEY = 'diagnostico-operativo-v1';
-let state = { answers: {}, evidence: {}, currentId: 'size', updatedAt: null };
+let state = { answers: {}, evidence: {}, currentId: 'size', updatedAt: null, submittedAt: null };
 let currentIndex = 0;
 let mediaRecorder = null;
 let recordingTarget = null;
@@ -343,6 +342,7 @@ function handleAnswer(question, optionId, checked) {
   }
 
   state.answers[question.id] = selected;
+  state.submittedAt = null;
   if (question.id === 'frictions') {
     const priority = selectedFor('priority')[0];
     if (priority && priority !== 'together' && !selected.includes(priority)) state.answers.priority = [];
@@ -402,6 +402,7 @@ function setEvidence(questionId, optionId, type, value) {
   state.evidence[questionId][optionId] ||= {};
   if (value) state.evidence[questionId][optionId][type] = value;
   else delete state.evidence[questionId][optionId][type];
+  state.submittedAt = null;
   saveDraft();
 }
 
@@ -617,6 +618,15 @@ function showResult() {
 
   const missing = buildMissingList(topicResult);
   elements.missingList.innerHTML = missing.map((item) => `<li>${escapeHtml(item)}</li>`).join('');
+  if (state.submittedAt) {
+    elements.send.disabled = true;
+    elements.send.textContent = 'Respuestas enviadas';
+    elements.exportStatus.textContent = 'Chiguire Labs ya recibió este diagnóstico.';
+  } else {
+    elements.send.disabled = false;
+    elements.send.textContent = 'Enviar respuestas';
+    elements.exportStatus.textContent = '';
+  }
   state.currentId = 'result';
   saveDraft();
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -684,25 +694,38 @@ function buildExportHtml() {
   return `<!doctype html><html lang="es-MX"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Expediente de diagnóstico operativo</title><style>body{max-width:900px;margin:0 auto;padding:42px 24px;background:#071018;color:#eef5f3;font-family:Arial,sans-serif;line-height:1.55}header{border-bottom:1px solid #26343c;padding-bottom:24px;margin-bottom:28px}h1,h2{line-height:1.15}h1{font-size:2.3rem}h2{font-size:1.2rem;margin-bottom:8px}.accent,.tag{color:#00e5c3}.tag{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:7px}section{padding:20px;border:1px solid #26343c;border-radius:14px;background:#0d1922;margin:12px 0}li{margin:10px 0;color:#c9d3d4}.summary{border-color:#00a995;background:#09221f}.note{color:#9fb0b2;font-size:.8rem}@media print{body{background:#fff;color:#111}.summary,section{background:#fff;border-color:#ddd}.accent,.tag{color:#087b6b}li,.note{color:#333}}</style></head><body><header><p class="accent"><strong>CHIGUIRE LABS</strong></p><h1>Diagnóstico operativo previo</h1><p>Generado el ${escapeHtml(generated)}</p></header><section class="summary"><p class="tag">Lectura preliminar</p><h2>Tema principal sugerido: ${escapeHtml(primary.label)}</h2><p>${escapeHtml(primary.reason)}</p><p><strong>Tema de respaldo:</strong> ${escapeHtml(secondary?.label || 'Por definir en la llamada')}</p><p><strong>Primer alcance a explorar:</strong> ${escapeHtml(primary.scope)}</p></section>${answersHtml}<p class="note">Este expediente fue generado en el dispositivo de la persona que respondió. Prepara una llamada de diagnóstico y no constituye una cotización ni una propuesta automática.</p></body></html>`;
 }
 
-function downloadExport() {
-  const blob = new Blob([buildExportHtml()], { type: 'text/html;charset=utf-8' });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement('a');
-  link.href = url;
-  link.download = `diagnostico-operativo-${new Date().toISOString().slice(0, 10)}.html`;
-  document.body.appendChild(link);
-  link.click();
-  link.remove();
-  URL.revokeObjectURL(url);
-  elements.exportStatus.textContent = 'Expediente descargado. Tú decides cuándo y con quién compartirlo.';
-}
-
-async function copySummary() {
+async function sendResponses() {
+  if (state.submittedAt) return;
+  const originalLabel = elements.send.textContent;
+  elements.send.disabled = true;
+  elements.send.textContent = 'Enviando…';
+  elements.exportStatus.textContent = 'Preparando el expediente de forma segura…';
   try {
-    await navigator.clipboard.writeText(buildPlainSummary());
-    elements.exportStatus.textContent = 'Resumen copiado. Las fotografías y audios no se incluyen en el texto.';
-  } catch (_) {
-    elements.exportStatus.textContent = 'No fue posible copiar automáticamente. Descarga el expediente para conservar las respuestas.';
+    const html = buildExportHtml();
+    const expediente = new File(
+      [html],
+      `diagnostico-operativo-${new Date().toISOString().slice(0, 10)}.html`,
+      { type: 'text/html;charset=utf-8' }
+    );
+    if (expediente.size > 7.5 * 1024 * 1024) {
+      throw new Error('El expediente supera el límite de envío. Elimina alguna evidencia multimedia y vuelve a intentarlo.');
+    }
+    const formData = new FormData();
+    formData.append('form-name', 'diagnostico-operativo');
+    formData.append('bot-field', '');
+    formData.append('title', `Diagnóstico operativo · ${new Date().toLocaleDateString('es-MX')}`);
+    formData.append('body', buildPlainSummary());
+    formData.append('expediente', expediente);
+    const response = await fetch('/', { method: 'POST', body: formData });
+    if (!response.ok) throw new Error('No fue posible entregar las respuestas. Revisa tu conexión e inténtalo nuevamente.');
+    state.submittedAt = new Date().toISOString();
+    await saveDraft();
+    elements.send.textContent = 'Respuestas enviadas';
+    elements.exportStatus.textContent = 'Listo. Chiguire Labs recibió tu diagnóstico para preparar la llamada.';
+  } catch (error) {
+    elements.send.disabled = false;
+    elements.send.textContent = originalLabel;
+    elements.exportStatus.textContent = error.message || 'No fue posible enviar las respuestas. Inténtalo nuevamente.';
   }
 }
 
@@ -723,30 +746,12 @@ elements.back.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 });
-elements.download.addEventListener('click', downloadExport);
-elements.copy.addEventListener('click', copySummary);
-elements.review.addEventListener('click', () => {
-  const active = activeQuestions();
-  currentIndex = Math.max(0, active.length - 1);
-  startQuestionnaire(true);
-});
-elements.clear.addEventListener('click', async () => {
-  const confirmed = window.confirm('¿Borrar todas las respuestas, fotografías y audios guardados en este dispositivo? Esta acción no se puede deshacer.');
-  if (!confirmed) return;
-  await deleteDraft();
-  state = { answers: {}, evidence: {}, currentId: 'size', updatedAt: null };
-  elements.result.hidden = true;
-  elements.questionnaire.hidden = true;
-  elements.intro.hidden = false;
-  elements.resume.hidden = true;
-  elements.start.textContent = 'Comenzar diagnóstico →';
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+elements.send.addEventListener('click', sendResponses);
 
 (async function initialize() {
   const saved = await loadDraft();
   if (saved?.answers && Object.keys(saved.answers).length) {
-    state = { answers: saved.answers || {}, evidence: saved.evidence || {}, currentId: saved.currentId || 'size', updatedAt: saved.updatedAt || null };
+    state = { answers: saved.answers || {}, evidence: saved.evidence || {}, currentId: saved.currentId || 'size', updatedAt: saved.updatedAt || null, submittedAt: saved.submittedAt || null };
     elements.resume.hidden = false;
     elements.start.textContent = 'Revisar desde el inicio →';
     if (state.currentId === 'result') elements.resume.textContent = 'Ver diagnóstico guardado';

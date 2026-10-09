@@ -1,1 +1,2 @@
-body{font:14px system-ui;color:#3b2419}main{display:grid;grid-template-columns:1fr 1fr;gap:5mm}article{break-inside:avoid}@page{size:A4;margin:10mm}
+body{font:8px system-ui;color:#3b2419}main{display:grid;grid-template-columns:repeat(3,45.5mm);gap:5mm}article{width:45.5mm;min-height:37.8mm;break-inside:avoid;padding:2mm!important;overflow-wrap:anywhere}article h3{font-size:11px;margin:1mm 0}article p{font-size:7px;margin:1mm 0}article svg{width:24mm!important;height:24mm!important}@page{size:A4;margin:10mm}
+@media print{.demo-card-test{display:none}}

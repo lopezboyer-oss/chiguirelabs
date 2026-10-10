@@ -5,6 +5,36 @@
 <section class="section" id="como"><div class="eyebrow">De una compra a la próxima visita</div><h2>Fácil en mostrador.<br>Valioso para tu negocio.</h2><div class="features"><article><span class="num">01</span><h3>Empieza como te resulte familiar.</h3><p>Una bebida, un sello. O Granos por categoría: Americano, Clásicos, Temporada, Alimentos y Postres. Cambia de modalidad conservando los saldos.</p></article><article><span class="num">02</span><h3>El papel también tiene su lugar.</h3><p>Entrega una tarjeta con QR o comparte el enlace del negocio. El cliente puede empezar sin dar sus datos y proteger su Costalito después.</p></article><article><span class="num">03</span><h3>Entiende qué los hace volver.</h3><p>Consulta recurrencia, consumos y horarios. Superinteligencia transforma los datos agregados en sugerencias concretas para revisar y probar.</p></article></div></section>
 <section class="brand-strip"><div><div class="eyebrow">Tu identidad, de principio a fin</div><h3>El nombre de tu café va primero.</h3><p>Ocho paletas para el dueño, el mostrador, los Costalitos y tus materiales con QR. Configura las recompensas sin pedir precios ni costos.</p></div><div class="color-dots" aria-label="Ocho paletas: café, azul, morado, rojo, verde, naranja, negro con dorado y negro con blanco"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></section>
 <section class="banner"><div><div class="eyebrow">Prueba el recorrido completo</div><h2>Configura. Registra.<br>Mira cómo vuelve.</h2><p>Explora las vistas de dueño, mostrador y cliente con datos de ejemplo. Sin crear una cuenta.</p></div><a class="button light" href="demo/">Abrir la demo →</a></section>
-<section class="start"><div><h3>Empieza gratis. Crece a tu ritmo.</h3><p>El plan de entrada incluye una cafetería, hasta 100 Costalitos activos al mes, un análisis mensual y una asesoría inicial en línea.</p><p class="small">Si superas el límite, sigues operando mientras un asesor revisa contigo el siguiente paso. Sucursales y personalización especial se cotizan.</p></div><a class="button" href="mailto:lopezboyer@gmail.com?subject=Quiero%20probar%20Vuelve%20en%20mi%20cafeter%C3%ADa">Quiero probar Vuelve</a></section>
+<section class="start"><div><h3>Empieza gratis. Crece a tu ritmo.</h3><p>El plan de entrada incluye una cafetería, hasta 100 Costalitos activos al mes, un análisis mensual y una asesoría inicial en línea.</p><p class="small">Si superas el límite, sigues operando mientras un asesor revisa contigo el siguiente paso. Sucursales y personalización especial se cotizan.</p></div><button class="button" id="open-request" type="button" aria-haspopup="dialog" aria-controls="request-dialog">Quiero probar Vuelve</button></section>
 <p class="status"><strong>Demostración con datos ficticios.</strong> La aplicación real está en pruebas y ya permite gestionar cuentas, equipo, compras, canjes y análisis de Superinteligencia. El demo muestra un informe guardado; no analiza nuevas compras ni consume una cuota real. <a href="https://vuelve-chiguirelabs.netlify.app/">Conocer la aplicación en pruebas →</a></p>
-</main><footer><div><div class="logo">vuelve<span>.</span></div><p>Nacido en Playas de Tijuana.</p></div><span class="studio-credit">Desarrollado por <a href="https://chiguirelabs.com">chiguirelabs.com</a></span></footer></body></html>
+</main><footer><div><div class="logo">vuelve<span>.</span></div><p>Nacido en Playas de Tijuana.</p></div><span class="studio-credit">Desarrollado por <a href="https://chiguirelabs.com">chiguirelabs.com</a></span></footer>
+<dialog id="request-dialog" class="request-dialog" aria-labelledby="request-title">
+  <div class="request-heading"><h2 id="request-title">Vuelve en tu cafetería</h2><button type="button" class="close-request" id="close-request" aria-label="Cerrar formulario">×</button></div>
+  <form id="vuelve-request" method="post">
+    <p class="request-intro">Déjanos un contacto y te ayudamos a empezar. Sin compromiso.</p>
+    <input type="hidden" name="access_key" value="7f0a7605-dabf-45db-bd2b-888918e735d1">
+    <input type="checkbox" name="botcheck" hidden tabindex="-1" autocomplete="off" aria-hidden="true">
+    <label for="request-name">Tu nombre</label>
+    <input id="request-name" name="name" autocomplete="name" maxlength="100" placeholder="¿Cómo te llamas?" required>
+    <label for="request-business">Nombre de tu cafetería</label>
+    <input id="request-business" name="cafeteria" autocomplete="organization" maxlength="120" placeholder="Ej. AROMA" required>
+    <fieldset class="contact-method"><legend>¿Cómo prefieres que te contactemos?</legend><div>
+      <label><input type="radio" name="contact_method" value="whatsapp" checked> WhatsApp</label>
+      <label><input type="radio" name="contact_method" value="email"> Correo</label>
+    </div></fieldset>
+    <label for="request-contact" id="contact-label">Tu WhatsApp</label>
+    <input id="request-contact" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="30" placeholder="+52 664 123 4567" aria-describedby="contact-hint" required>
+    <p id="contact-hint" class="request-hint">Incluye la lada si tu número es de otro país.</p>
+    <label class="request-consent"><input type="checkbox" name="privacy_consent" value="Sí" required><span>Autorizo que chiguirelabs.com me contacte para atender esta solicitud. <a href="/privacidad/" target="_blank" rel="noopener">Aviso de privacidad</a>.</span></label>
+    <p id="request-status" class="request-status" role="status" aria-live="polite"></p>
+    <button id="request-submit" class="button" type="submit">Solicitar demostración</button>
+  </form>
+  <section id="request-success" class="request-success" hidden>
+    <span class="success-check" aria-hidden="true">✓</span>
+    <h3 id="request-success-title" tabindex="-1">¡Solicitud recibida!</h3>
+    <p>Te contactaremos por el medio que elegiste para conocer tu cafetería y mostrarte Vuelve.</p>
+    <button id="close-request-success" class="button" type="button">Listo</button>
+  </section>
+</dialog>
+<script type="module" src="request.mjs"></script>
+</body></html>

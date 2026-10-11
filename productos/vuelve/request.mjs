@@ -75,6 +75,6 @@ form.addEventListener('submit', async event => {
     sending = false;
     form.removeAttribute('aria-busy');
     submit.disabled = false;
-    submit.textContent = 'Solicitar demostración';
+    submit.textContent = 'Solicitar contacto';
   }
 });

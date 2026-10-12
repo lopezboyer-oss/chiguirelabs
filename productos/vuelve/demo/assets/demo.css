@@ -12,3 +12,5 @@ main{padding:16px 14px}header{margin-bottom:14px;gap:12px}h1{font-size:clamp(26p
 @media(prefers-reduced-motion:reduce){.menu-chevron{transition:none}}
 
 .achievement>p{font-size:14px;margin:5px 0 0}.costalito>p{margin:8px 0}.costalito .caption{margin:10px 0}.counter-capture>.row:last-of-type{margin-bottom:0}.owner-section-body #weights-form input{width:100px}.owner-section-body .reward-form input[name=name]{width:100%}.owner-section-body .reward-form label:first-child{flex:1;min-width:150px}
+
+.demo-back{font-size:12px;margin:-4px 0 12px}.demo-back a{text-decoration:none}.demo-back a:hover{text-decoration:underline}.demo-next{text-align:center;border:1px solid var(--border);border-radius:16px;background:var(--surface);padding:16px;margin:22px 0 14px}.demo-next h2{font-size:18px;margin:0 0 10px}.demo-next>.button{font-size:14px;min-height:44px}.demo-next>p{margin:8px 0 0;font-size:12px}
